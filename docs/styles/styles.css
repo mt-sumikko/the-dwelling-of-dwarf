@@ -1,0 +1,344 @@
+ /*ここから共通設定*/
+ @charset "UTF-8";
+
+
+ @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+ /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+ */
+ 
+ /*デフォルトの設定があるとスタイリング時にわかりにくいので、こちらとりあえず削除します*/
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline; }
+ 
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure,
+ footer, header, hgroup, menu, nav, section {
+   display: block; }
+ 
+ 
+ /*各種見出しとかタグのデフォルト設定*/
+ h1 {
+     font-size: 48px;
+     font-weight: 300;
+     color: #000;
+   }
+
+   h2.sectionTitle {
+       font-weight: 600;
+       font-size: 36px;
+       color: #000;
+       margin:20px 0 30px 0;
+     }
+   h1.page-title{
+    margin-bottom:40px;
+    float: left;
+   }
+
+   .page-description{
+     display:inline-block;
+     margin: 30px 0px 0 40px;
+     color:#646464;
+  
+   }
+   /*  p{
+       font-size: 16px;
+     }*/
+     ol, ul {
+         list-style: none; 
+     }
+     a { 
+         text-decoration: none ;
+         cursor: pointer;
+     }
+ 
+     a:link {
+      color: #828282;
+    }
+     a:visited {
+      color:#828282;
+    }
+     a:hover {
+      color:#000;
+      cursor: pointer;
+    }
+     a:active {
+      color:#C4C4C4;
+    }
+
+/*ボタンのスタイルだけリンクが白なので*/
+     .moreButton > a.btn-flat-simple {
+      color: #fff;
+     }
+       .btn-flat-simple {
+         position: relative;
+         display: inline-block;
+         font-weight: bold;
+         padding: 0.35em 1.5em;
+         text-decoration: none;
+         color: #fff;
+         background: #000;
+         transition: .4s;
+        
+       }
+       
+       .btn-flat-simple:hover {
+      opacity:0.7;
+         color:#fff;
+       }
+     
+       .moreButton{
+         text-align: center;
+         margin: 30px 0;
+       }
+ 
+ 
+ body{
+  background-color:#ffffff;
+  margin: 0px auto;
+  
+  font-family: 'Open Sans',"Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3",sans-serif;
+ max-width:1200px;
+ 
+  }
+ 
+  
+  footer {
+    border-top: 1px solid #c4c4c4;
+     position: relative;
+    /* display: table;*/
+     width: 100%;
+     height: 120px;
+     bottom: 0px;
+     justify-content: center;
+     text-align: center;
+     line-height: 1.5em;
+     letter-spacing: 0.8px;
+     margin: 30px 0 0 0;
+     padding: 40px 0 0 0;
+     color: #828282; 
+    }
+     footer p.sd {
+       font-size:8pt;
+       margin-bottom: 13px; 
+      }
+     footer p.ja {
+       font-size:8pt; 
+      }
+     footer a {
+       text-decoration: none; 
+      }
+       footer a.sd {
+        font-size:8pt;
+       }
+         footer a.sd:visited {
+           color: #828282; 
+          }
+         footer a.sd:link {
+           color: #828282; 
+          }
+ 
+  .float-clear{
+     clear:both;
+ }
+
+
+ /*グロナビ　ヘッダーのスタイル*/
+
+
+
+ header {
+     text-align: center;
+     border-bottom: 1px solid #c4c4c4;
+    max-width:1140px;
+    width: 100%;
+    margin:0 auto;
+    z-index:10;
+    background-color: rgba(255,255,255,0.7);
+   }
+   
+   .nav-list{
+     text-align: center;
+     padding: 20px 0;
+     margin: 0 auto;
+     
+
+   }
+ 
+   .nav-list-item{
+     list-style: none;
+     display: inline-block;
+     margin: 0 30px;
+     font-size: 20px;
+     padding: 8px;
+   }
+   .nav-list-item >a{
+
+  }
+   
+
+   /*グロナビのうち現在いる親の階層　を黒くする*/
+.nav-list-item >a.here{
+  color:#000;
+}
+ 
+
+
+
+  /*headerのスクロールに応じて現れる*/
+ 
+  .header {
+    position: fixed;
+   
+
+  }
+  .header {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+  .header--unpinned {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+  }
+
+  .header {
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease;
+  }
+
+
+/*言語のスタイル*/
+.language{
+ max-width:1140px;
+   text-align: right;
+   color: #828282;
+   position:relative;
+   margin-bottom: 70px;
+ }
+#language-text{
+  font-size:16px;
+  margin-right:12px;
+}
+
+ .language>a.here{
+  color:#000;
+ }
+
+ .language>a{
+  margin: 0 4px;
+  font-size: 20px;
+
+ }
+
+
+
+ main{
+  padding: 0px 30px 10px 30px;
+ }
+
+   /*headr意外を取り囲む*/
+ 
+ .contents {
+    /* min-height: 500px;*/
+     background-color: #FFF;
+     padding-top:105px;
+     animation: fadeIn 3s ease 0s 1 normal;
+     -webkit-animation: fadeIn 3s ease 0s 1 normal;
+   
+ }
+ 
+ 
+     .scroll-top {
+         position: fixed;
+         width: 100px;
+         height: 50px;
+         bottom: 40px;
+         right: 40px;
+         cursor: pointer;
+         z-index: 100;
+         text-align: center;
+      }
+         .scroll-top img {
+           width: 30px;
+           height: auto; 
+         }
+         .scroll-top p {
+           font-size: 17px;
+           color: #535353;
+           font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+           letter-spacing: 0.5px;
+           padding-top: 8px; 
+         }
+ 
+
+  /*topにもどる*/
+  .js-scroll-fadein {
+  transition: opacity 1s;
+  visibility: hidden;
+  opacity: 0;
+}
+.js-scroll-fadein.is-fadein {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------
+  arrow
+--------------------------------*/
+.arrow {
+  position: fixed;
+  right: 16px;
+  bottom: 12px;
+  color: #fff;
+  cursor: pointer;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+}
+.arrow:hover {
+  opacity: 0.8;
+  bottom: 15px;
+  -webkit-filter: drop-shadow(3px 3px 3px #828282);
+}
+.arrow:before, .arrow:after {
+}
+
+/*
+.arrow:before {
+  top: 11px;
+}
+.arrow:after {
+  top: 21px;
+}*/
+
+
+
+
+.ia-twitter{
+text-align: right;
+padding:30px 0 0 0;
+
+}
+

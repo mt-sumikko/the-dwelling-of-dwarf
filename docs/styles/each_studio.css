@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+
+ /*ーーーーーーーーー左サイド・スタジオ中身ーーーーーーーー*/
+ .sns-icon{
+    width:40px;
+    margin-left:12px;
+    padding:8px;
+
+    }
+    /*twitterのicon２回りくらい小さいんだが*/
+     .sns-icon-twitter{
+    width:56px;
+    margin-left:12px;
+     }
+     .sns-link:hover{
+         opacity:0.5;
+     }
+     .inner-title .studio-sns{
+     /*今のところ見た目が一番マシ　妥協*/
+      padding-left:50px
+     }
+
+.labview {
+    position: relative;
+    display: flex; /*ここを外すと右サイドが下に落ちる*/
+    max-width:900px;
+    margin:0 auto;
+}
+    .labview .left {
+      width: 66%;
+      position: relative; 
+    }
+ 
+    /*アイコンセットsns-iconとスタジオ名セットstudioTitleTextを、親囲いstudioTitleに display: flex;することで横並びにする*/
+   .inner-title {
+        display: flex;
+    }
+    /*タイトル部分全体左に縦棒を引く*/
+    .topBar{
+      max-width:900px;
+      margin: 0 auto;
+   
+    }
+        .topBar .title {
+          width: 100%;
+          text-align: left;
+          /*border-left: solid 6px #E80000;
+          padding-left: 10px;*/
+          margin-bottom: 10px;
+          border-bottom: 1px solid #828282;
+          display: flex;
+          /*align-items: flex-end;*/
+          
+          
+         }
+       
+            /*スタジオ名の表示*/
+p.studio-title-top{
+            letter-spacing: 0.05em;
+            width: 100%;
+            margin: -5px 0 0px 0px;
+            font-size:24pt; 
+            font-weight: 600;
+        }
+        /*コアの表示*/
+        p.studio-core-top-media{
+          border-left: solid 33px #E80000;
+            font-size:16pt; 
+            margin-bottom:10px;
+            font-weight: 400;
+            padding-left:8px;/*マージンだと四角ごと右に寄る*/
+        }
+
+        p.studio-core-top-product {
+          border-left: solid 33px #0C09B2;
+            font-size:16pt; 
+            margin-bottom:10px;
+            font-weight: 400;
+            padding-left:8px;/*マージンだと四角ごと右に寄る*/
+        }
+  
+
+    /*スタジオ説明文の体裁*/
+ p.studio-description {
+        margin-top: 20px;
+          font-size :12pt;
+          max-width:600px;
+          font-weight: 200;
+         }
+
+         .faculty-div{
+             margin-top: 60px;
+         }
+         /*教員サイトリンク*/
+         .faculty-text-div > p {
+            font-size :16pt;    
+        }
+         /*教員名と教授か准教授*/
+        .faculty-text-div >span{
+            font-size :16pt;
+          display:inline-block;/*これ書かないと下マージンが効かない*/
+          margin:0 0.7em 20px 0;
+          /*display: flex;*/
+        }
+        /*見出し「担当教員」*/
+        .faculty-div > h3{
+            font-size :20pt;
+            font-weight:600;
+            margin-bottom:10px;
+        }
+
+        .studio-faculty-img{
+            width:160px;
+            height: 160px;
+            float:left;
+            margin-right:20px;
+   
+        }
+
+
+/*写真のスライドショー*/
+    .studio-slide{
+      width:600px;
+       }
+
+    
+    .fadeout{
+      opacity: 0;
+      transition: 3s ease-in-out;
+      -webkit-transition: 3s ease-in-out;
+      }
+      .fadein{
+      opacity: 1;
+      transition: 3s ease-in-out;
+      -webkit-transition: 3s ease-in-out;
+      }
+  
+ 
+      
+ /*ーーーーーーーーー右サイド・スタジオリストーーーーーーーー*/
+    .labview .right {
+      width: 200px; 
+      margin-top:30px;
+      /*親要素 labviewに右揃えで配置*/
+      position: absolute;
+      right: 0;
+      
+    }
+
+    /*コア間の隙間をとる*/
+      .labview .right .coreBox {
+        margin-bottom: 50px; 
+    }
+    
+    .labview .right p {/*右サイド　スタジオリストの pエレメント　コア名メディアアートコア・メディア創生　プロダクトデザインコア*/
+        /*letter-spacing: 0.3em;*/
+        margin: 0 0 20px 0;
+        font-size:12pt;
+        color: #828282;
+     }
+
+    .studio-list-item {
+        margin:16px 0;
+    }
+
+    .studio-list-item >a{
+      font-size:12pt;
+      /*padding-left:4px;*/
+    }
+    .studio-list-media .studio-list-item >a.here{
+        color:#000;
+        border-left: solid 3px #E80000;
+        padding-left:4px;
+    }
+
+    .studio-list-product .studio-list-item >a.here{
+      color:#000;
+      border-left: solid 3px #0C09B2;
+      padding-left:4px;
+  }
+
+
+       /*コア名の下に線を引く*/
+      p.core-underLine{
+        border-bottom: 1px solid #828282;
+      }
+   
+
+      .faculty-sitelink-icon {
+        background: none;
+        display: inline-block;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 3px 0 0 5px; 
+    }
+
+    a.faculty-link {
+      font-weight: 600;
+      font-size:12pt;
+
+  }
+
+
+
+  .distribution-map-img{
+    max-width:900px;
+  margin: 0 auto;
+  padding:20px 30px 30px 30px;
+}
