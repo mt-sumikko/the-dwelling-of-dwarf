@@ -438,7 +438,7 @@ div.leftText{
  .sectionDescription{
      text-align: center;/*1行ものには必要*/
      margin: 30px auto;
-     width:600px;
+     max-width:800px;
  }
 
 
@@ -510,3 +510,89 @@ div.leftText{
 
 
 
+
+
+
+
+     .card {
+      width: 360px;
+      /*background: #fff;*/
+      border-radius: 5px;
+      /*box-shadow: 0 2px 5px #ccc;*/
+      text-align:center;
+      border: 2px solid  #FFB30B;
+    }
+    .card-img {
+      border-radius: 50%;
+      max-width: 40%;
+      height: auto;
+      border:3px solid #FFB30B;
+      margin :20px  0 auto ;
+     
+    }
+    .card-content {
+      padding: 10px 20px 20px 20px;
+    }
+    .card-title {
+      font-size: 20px;
+      text-align: center;
+      color: #FFF;
+    }
+.role{
+  color:  #FFB30B;
+}
+.name-en{
+  margin-bottom:20px;
+  color: #CCC;
+}
+    
+    .card-text {
+      color: #FFF;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align:left;
+      margin-bottom:20px;
+    }
+    .card-role{
+      color: #FFF;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align:left;
+    }
+    .card-link {
+      text-align: center;
+      border-top: 1px solid  #FFB30B;
+      padding: 20px;
+    }
+    .card-link a {
+      text-decoration: none;
+      color: #FFB30B;
+      margin: 0 10px;
+    }
+    .card-link a:hover {
+      color: #0090aa;
+    }
+    .logoType{
+      text-align:center;
+      width:200px;
+    }
+    .odenki-logo{
+      text-align:center;
+    }
+
+    .flexBox-creator{
+      max-width:800px;
+      margin: 0 auto;
+      display:-webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      padding:0;
+       flex-direction: row;
+       flex-wrap: wrap;
+      
+     }
+
+     .about-odenki{
+margin:10px 0 60px 0;
+     }
