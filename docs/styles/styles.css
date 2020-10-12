@@ -44,13 +44,14 @@
    }
 
  
-   h2.sectionTitle {
+   a.sectionTitle {
     position: relative;
        font-weight: 600;
        font-size: 36px;
        color: #FFF;
        margin:20px 0 30px 0;
        text-align: center;
+       display:block;
      }
      .sectionTitle:before {
       content: '';
@@ -361,17 +362,22 @@ padding:30px 0 0 0;
      display:flex;
      align-items: flex-start;
      text-align:justify;
+     flex-wrap: wrap;
    }
 
  .side-by-side_container img {
        position: relative;
        width: 40%;
+       min-width:200px;
        height: auto;
+       display:inline-block;
        
    }
 
    .rightText-div{
      width:50%;
+     min-width:350px;
+     display:inline-block;
    }
 
 
@@ -412,7 +418,36 @@ div.leftText{
 }
 /*https://www.eyesofc.co.jp/webeyes/category/homepage/642/ youtube埋め込み　レスポンシブ*/
 
-
+.habit{
+  margin: 30px auto;
+}
+.subTitle{
+  text-align:center;
+  color:#fff;
+  font-size:24px;
+  padding: 10px 0;
+}
+.flexBox-habitat{
+  max-width:800px;
+  margin: 0 auto;
+  display:-webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding:0;
+   flex-direction: row;
+   flex-wrap: wrap;
+  
+ }
+.habit-card{
+  width: 240px;
+  /*background: #fff;*/
+  border-radius: 5px;
+  /*box-shadow: 0 2px 5px #ccc;*/
+  text-align:center;
+  border: 2px solid  #FFB30B;
+  margin-bottom:30px;
+}
 
      .card {
       width: 360px;
@@ -421,6 +456,7 @@ div.leftText{
       /*box-shadow: 0 2px 5px #ccc;*/
       text-align:center;
       border: 2px solid  #FFB30B;
+      margin-bottom:30px;
     }
     .card-img {
       border-radius: 50%;
@@ -533,4 +569,76 @@ margin:10px 0 60px 0;
 
 		#thumbs .swiper-slide-active {
 			opacity: 1;
-		}
+    }
+    
+
+    @media screen and (max-width: 640px) {
+      .side-by-side_container {
+       
+      }
+      .rightText {
+     
+      }
+      .leftText {
+     
+      }
+    }
+
+
+    .box {
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  
+    .pict {
+      width: 36%;
+     /* margin-left: 3%;*/
+    }
+    
+    .pict img {
+      width: 100%;
+      height:auto;
+      /*こうやって要素のサイズを明示しておかないと崩れる*/
+    }
+    
+    .box-second {
+      flex-direction: row-reverse;
+    }
+ 
+    .text{
+   max-width:60%;
+    }
+    .right{
+      margin-right:4%;/*テキスト60　テキストの右４　画像36%　余白をつけないと画像がよっちゃう*/
+    }
+    @media (max-width:768px) {
+      .box {
+        flex-direction: column;
+      }
+     .box-second {
+        flex-direction: column;
+      }
+      .text {
+       max-width:100%;
+      }
+
+      .right{
+        margin-right:0;
+      }
+ 
+      .pict {
+        width:100%;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+     .box-second .pict {
+        margin-left: 0;
+        margin-right: 0%;
+      }
+      .pict img {
+        width:100%;
+        height:auto;
+      }
+    }
