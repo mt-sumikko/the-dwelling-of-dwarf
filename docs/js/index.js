@@ -1,4 +1,3 @@
-//全ページに共通の事項を書く
 /*---------topへ戻るボタン-------------*/
 function getScrolled() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
@@ -78,3 +77,18 @@ window.addEventListener("scroll", () => {
     pos = window.scrollY;
     onScroll();
 });
+
+/*---------swiper.js　スライドショー-------------*/
+var slider = new Swiper('#slider', {
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev'
+})
+var thumbs = new Swiper('#thumbs', {
+    centeredSlides: true,
+    spaceBetween: 10,
+    slidesPerView: "auto",
+    touchRatio: 0.2,
+    slideToClickedSlide: true
+});
+slider.params.control = thumbs;
+thumbs.params.control = slider;

@@ -43,13 +43,14 @@
      color: #FFF;
    }
 
+ 
    h2.sectionTitle {
     position: relative;
        font-weight: 600;
        font-size: 36px;
        color: #FFF;
        margin:20px 0 30px 0;
-   
+       text-align: center;
      }
      .sectionTitle:before {
       content: '';
@@ -66,10 +67,7 @@
     }
     /*https://copypet.jp/120/　文字の下に短めのライン*/
 
-   h1.page-title{
-    margin-bottom:40px;
-    float: left;
-   }
+  
 
    .page-description{
      display:inline-block;
@@ -276,8 +274,8 @@ line-height:1;
    
  }
  
- 
-     .scroll-top {
+  /*topにもどる*/
+  .scroll-top {
          position: fixed;
          width: 100px;
          height: 50px;
@@ -287,20 +285,20 @@ line-height:1;
          z-index: 100;
          text-align: center;
       }
-         .scroll-top img {
+  .scroll-top img {
            width: 30px;
            height: auto; 
          }
-         .scroll-top p {
-           font-size: 17px;
-           color: #535353;
-           font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
-           letter-spacing: 0.5px;
-           padding-top: 8px; 
+  .scroll-top p {
+  font-size: 17px;
+  color: #535353;
+  font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.5px;
+  padding-top: 8px; 
          }
  
 
-  /*topにもどる*/
+ 
   .js-scroll-fadein {
   transition: opacity 1s;
   visibility: hidden;
@@ -337,6 +335,19 @@ line-height:1;
 text-align: right;
 padding:30px 0 0 0;
 
+}
+
+
+.eachSection{/*各セクション間の余白*/
+  margin:  120px 0; 
+
+}
+ 
+
+.sectionDescription{
+  text-align: center;/*1行ものには必要*/
+  margin: 30px auto;
+  max-width:800px;
 }
 
 
@@ -400,117 +411,6 @@ div.leftText{
   height: 100% !important;
 }
 /*https://www.eyesofc.co.jp/webeyes/category/homepage/642/ youtube埋め込み　レスポンシブ*/
-
-
-
-
-  /*style for HOME*/
-  .top-title{
-    max-width:900px;
-    margin: 0 auto;
-  }
- .sectionTitle{
-     text-align: center;
- }
- 
-   
- .eachSection{/*各セクション間の余白*/
-     margin:  120px 0; 
- 
-   }
-     
- .top-title > h4{
-   font-size:24px;
-   font-weight: 500;
-   color: #828282;
- }
-
-      
- .top-title > h1{
-  font-size:48px;
-  font-weight: 500;
-}
-
- .top-img{
-     margin:0 auto;
-     text-align: center;
- }
- .sectionDescription{
-     text-align: center;/*1行ものには必要*/
-     margin: 30px auto;
-     max-width:800px;
- }
-
-
- 
- /*news*/
- .flexBox_topNews {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width:900px;
-
-}
-
-
- /*faculty*/
-  /*教員画像のスライドショー*/
-  .faculty-slide-container{
-    max-width:700px;
-   margin:0 auto;/*コンテナ自身の中央揃え*/
-   display:flex;
-   justify-content:space-between;
-   
-    }
-   
-    .faculty-slide{
-   width:200px;
-   
-    }
-    .fadeout{
-     opacity: 0;
-     transition: 3s ease-in-out;
-     -webkit-transition: 3s ease-in-out;
-     }
-     .fadein{
-     opacity: 1;
-     transition: 3s ease-in-out;
-     -webkit-transition: 3s ease-in-out;
-     }
- 
-
-     /*gallery*/
-
-  a.swipebox{
-    display:inline-block;
-    margin-bottom:20px;
-  }
-     img.gallery-img {
-      width : 185px;
-     height : 185px;
-     object-fit: cover;/*アスペ比を変えずにトリミング*/
-
-     }
-
-     .flexBox-gallery{
-      max-width:800px;
-      margin: 0 auto;
-      display:-webkit-flex;
-      display: flex;
-      -webkit-justify-content: space-between;
-      justify-content: space-between;
-      padding:0;
-       flex-direction: row;
-       flex-wrap: wrap;
-      
-     }
-
-
-
-
-
 
 
 
@@ -596,3 +496,41 @@ div.leftText{
      .about-odenki{
 margin:10px 0 60px 0;
      }
+
+
+
+/*スライドショー*/
+
+
+		.swiper-container {
+			text-align: center;
+		}
+
+		.swiper-container .swiper-slide img {
+			max-width: 100%;
+			width: 100%;
+			height: auto;
+		}
+
+		.prettyprint {
+			border: none;
+			background: #fafafa;
+			color: #697d86;
+		}
+
+		#thumbs {
+			height: 20%;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+
+		#thumbs .swiper-slide {
+			width: 20%;
+			height: 100%;
+			opacity: 0.6;
+			cursor: pointer;
+		}
+
+		#thumbs .swiper-slide-active {
+			opacity: 1;
+		}

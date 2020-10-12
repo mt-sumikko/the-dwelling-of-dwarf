@@ -26,18 +26,10 @@
   <link rel="icon" href="./img/favicon.ico" />
   <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon-180x180.png" sizes="180x180">
   <link rel="icon" type="image/png" href="./img/favicons/android-chrome-192x192.png" sizes="192x192">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="js/jquery.swipebox.min.js"></script>
-
-
-  <script>
-    $(function () {
-      $(".swipebox").swipebox();
-    });
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
 
 </head>
 
@@ -71,12 +63,8 @@
   <main>
 
 
-    <section class="contents" style="opacity: 1;">
-
-
-
+    <section class="contents">
       <div class="eachSection">
-
 
         <h2 class="sectionTitle" a name="about">ABOUT</h2>
 
@@ -137,35 +125,65 @@
       <div class="eachSection">
         <h2 class="sectionTitle" a name="gallery">GALLERY</h2>
 
-        <div class="flexBox-gallery">
 
-          <a class="swipebox" rel="slide1" href="img/IMG_1105.jpeg" title="Caption1"><img class="gallery-img"
-              src="img/IMG_1105.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1106.jpeg" title="Caption2"><img class="gallery-img"
-              src="img/IMG_1106.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1107.jpeg" title="Caption3"><img class="gallery-img"
-              src="img/IMG_1107.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1108.jpeg" title="Caption4"><img class="gallery-img"
-              src="img/IMG_1108.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
-          <a class="swipebox" rel="slide1" href="img/IMG_1109.jpeg" title="Caption5"><img class="gallery-img"
-              src="img/IMG_1109.jpeg"></a>
+        <div id="slider" class="swiper-container swiper-container-horizontal">
+          <div class="swiper-wrapper" style="transform: translate3d(-2280px, 0px, 0px); transition-duration: 0ms;">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-prev" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-active" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-next" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
 
-
+          </div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+          <div class="swiper-button-next swiper-button-white"></div>
         </div>
+
+        <div id="thumbs" class="swiper-container swiper-container-horizontal">
+          <div class="swiper-wrapper" style="transform: translate3d(-20px, 0px, 0px); transition-duration: 0ms;">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-prev" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide swiper-slide-active" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg"
+                alt=""></div>
+            <div class="swiper-slide swiper-slide-next" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            </div>
+
+          </div>
+        </div>
+
 
 
       </div>
@@ -251,3 +269,8 @@
 </body>
 
 </html>
+
+<!--
+  Special Thaks
+  https://www.willstyle.co.jp/blog/724/
+-->
