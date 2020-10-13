@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="styles/swipebox.css">
 
 
+
   <meta property="og:url" content="https://sumikko-mountain.github.io/redesign-ia/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="東京都立大学インダストリアルアート学科" />
@@ -30,15 +31,57 @@
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script>
+    (function ($) {
+      $(function () {
+        var $header = $('#top-head');
+        // Nav Fixed
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 350) {
+            $header.addClass('fixed');
+          } else {
+            $header.removeClass('fixed');
+          }
+        });
+        // Nav Toggle Button
+        $('#nav-toggle').click(function () {
+          $header.toggleClass('open');
+        });
+      });
+    })(jQuery);
+  </script>
 </head>
 
 <body>
 
 
+  <header id="top-head">
+    <div class="inner">
+      <div id="mobile-head">
+        <h1 class="logo">Logo</h1>
+        <div id="nav-toggle">
+          <div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <nav id="global-nav">
+        <ul>
+          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">ABOUT</a></li>
+          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">STORY</a></li>
+          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">VIDEO</a></li>
+          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">GALLERY</a></li>
+          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">CREATOR</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 
-  <header id="header" class="header">
+  <!--<header id="header" class="header">
     <ul class="nav-list">
       <li class="nav-list-item"><a class="here" href="#about">ABOUT</a></li>
       <li class="nav-list-item"><a href="#story">STORY</a></li>
@@ -53,7 +96,7 @@
       </li>
     </ul>
 
-  </header>
+  </header>-->
   <div class="first-view">
     <h3>離れて見守ってみてください</h3>
     <h1>小人のすみか</h1>
@@ -112,7 +155,7 @@
 
           </h3>
           <div class="flexBox-habitat">
-            <section class="habit-card">
+            <section class="card-habit">
               <img class="card-img" src="img/yui_400x400.png" alt="">
               <div class="card-content">
                 <h2 class="role">designer</h2>
@@ -133,7 +176,7 @@
               </div>
             </section>
 
-            <section class="habit-card">
+            <section class="card-habit">
               <img class="card-img" src="img/yui_400x400.png" alt="">
               <div class="card-content">
                 <h2 class="role">designer</h2>
@@ -153,7 +196,7 @@
                 <a href="http://webcreatorbox.com/">Twitter</a>
               </div>
             </section>
-            <section class="habit-card">
+            <section class="card-habit">
               <img class="card-img" src="img/yui_400x400.png" alt="">
               <div class="card-content">
                 <h2 class="role">designer</h2>

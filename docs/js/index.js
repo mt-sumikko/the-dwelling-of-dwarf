@@ -26,7 +26,7 @@ topButton.onclick = function () {
 };
 
 
-
+/*
 //ヘッダーのスクロール
 let lastPos = 0;
 // ヘッダーを取得
@@ -76,7 +76,7 @@ window.addEventListener("scroll", () => {
     // スクロールするごとにpos（現在地）の値を更新
     pos = window.scrollY;
     onScroll();
-});
+});*/
 
 /*---------swiper.js　スライドショー-------------*/
 var slider = new Swiper('#slider', {
@@ -92,3 +92,7 @@ var thumbs = new Swiper('#thumbs', {
 });
 slider.params.control = thumbs;
 thumbs.params.control = slider;
+
+
+
+

@@ -149,14 +149,14 @@
 p{
   color:#FFF;
 }
- header {
+/* header {
      text-align: center;
      border-bottom: 1px solid #FFB30B;
     width: 100%;
     margin:0 auto;
     z-index:10;
-   /* background-color: rgba(255,255,255,0.7);*/
-   }
+   /* background-color: rgba(255,255,255,0.7);
+   }*/
    
    .nav-list{
      text-align: center;
@@ -439,7 +439,7 @@ div.leftText{
    flex-wrap: wrap;
   
  }
-.habit-card{
+.card-habit{
   width: 240px;
   /*background: #fff;*/
   border-radius: 5px;
@@ -456,7 +456,6 @@ div.leftText{
       /*box-shadow: 0 2px 5px #ccc;*/
       text-align:center;
       border: 2px solid  #FFB30B;
-      margin-bottom:30px;
     }
     .card-img {
       border-radius: 50%;
@@ -571,20 +570,279 @@ margin:10px 0 60px 0;
 			opacity: 1;
     }
     
+/*メニュー*/
+.inner {
+	width: 1200px;
+	margin: 0 auto;
+}
+.inner:after {
+	content: "";
+	clear: both;
+	display: block;
+}
 
-    @media screen and (max-width: 640px) {
-      .side-by-side_container {
-       
-      }
-      .rightText {
-     
-      }
-      .leftText {
-     
-      }
-    }
+/* header */
+#top-head {
+	font-size: 14px;
+	top: -100px;
+	position: absolute;
+	width: 100%;
+	margin: 100px auto 0;
+	padding: 30px 0 0;
+	line-height: 1;
+	z-index: 999;
+}
+#top-head a,
+#top-head {
+	color: #fff;
+	text-decoration: none;
+}
+#top-head .inner {
+	position: relative;
+}
+#top-head .logo {
+	float: left;
+	font-size: 36px;
+}
+#global-nav ul {
+	list-style: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 14px;
+}
+#global-nav ul li {
+	float: left;
+	position: relative;
+}
+#global-nav ul li a {
+	padding: 0 30px;
+}
+
+/* Btn Hover */
+#global-nav ul li:after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	bottom: -20px;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+#global-nav ul li:hover:after {
+	background: #fff;
+	bottom: -30px;
+}
 
 
+/* Fixed */
+#top-head.fixed {
+	margin-top: 0;
+	top: 0;
+	position: fixed;
+	padding-top: 10px;
+	height: 55px;
+	background: #fff;
+	background: rgba(255,255,255,.7);
+
+	transition: top 0.65s ease-in;
+	-webkit-transition: top 0.65s ease-in;
+	-moz-transition: top 0.65s ease-in;
+}
+#top-head.fixed .logo {
+	font-size: 24px;
+	color: #333;
+}
+#top-head.fixed #global-nav ul li a {
+	color: #333;
+	padding: 0 20px;
+}
+
+/* Fixed Btn Hover */
+#top-head.fixed #global-nav ul li:after {
+	bottom: -10px;
+}
+#top-head.fixed #global-nav ul li:hover:after {
+	background: #0062B8;
+	bottom: -20px;
+}
+
+
+/* Transition */
+/*
+#top-head,
+#top-head .logo,
+#global-nav ul li,
+#global-nav ul li a {
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+*/
+
+
+
+/* Toggle Button */
+#nav-toggle {
+	display: none;
+	position: absolute;
+	right: 12px;
+	top: 14px;
+	width: 34px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 101;
+}
+
+#nav-toggle div {
+	position: relative;
+}
+#nav-toggle span {
+	display: block;
+	position: absolute;
+	height: 4px;
+	width: 100%;
+	background: #666;
+	left: 0;
+	-webkit-transition: .35s ease-in-out;
+	-moz-transition: .35s ease-in-out;
+	transition: .35s ease-in-out;
+}
+#nav-toggle span:nth-child(1) {
+	top: 0;
+}
+#nav-toggle span:nth-child(2) {
+	top: 11px;
+}
+#nav-toggle span:nth-child(3) {
+	top: 22px;
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+	article {
+		padding: 0 30px;
+	}
+	.inner {
+		width: 90%;
+    padding: 0 30px;
+	}
+	#global-nav ul li a {
+		padding: 0 20px;
+	}
+	#top-head.fixed #global-nav ul li a {
+		padding: 0 15px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	#main-visual {
+		height: 300px;
+	}
+
+
+	#top-head,
+	.inner {
+		width: 100%;
+		padding: 0;
+	}
+	#top-head {
+		top: 0;
+		position: fixed;
+		margin-top: 0;
+	}
+	/* Fixed reset */
+	#top-head.fixed {
+		padding-top: 0;
+		background: transparent;
+	}
+
+
+	#mobile-head {
+		background: #fff;
+		width: 100%;
+		height: 56px;
+		z-index: 999;
+		position: relative;
+	}
+	#top-head.fixed .logo,
+	#top-head .logo {
+		position: absolute;
+		left: 13px;
+		top: 13px;
+		color: #333;
+		font-size: 26px;
+	}
+
+	#global-nav {
+		position: absolute;
+		/* 開いてないときは画面外に配置 */
+		top: -500px;
+		background: #333;
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+		-webkit-transition: .5s ease-in-out;
+		-moz-transition: .5s ease-in-out;
+		transition: .5s ease-in-out;
+	}
+	#global-nav ul {
+		list-style: none;
+		position: static;
+		right: 0;
+		bottom: 0;
+		font-size: 11px;
+	}
+	#global-nav ul li {
+		float: none;
+		position: static;
+	}
+	#global-nav ul li:after  {
+		display: none;
+	}
+	#top-head #global-nav ul li a,
+	#top-head.fixed #global-nav ul li a {
+		width: 100%;
+		display: block;
+		color: #fff;
+		padding: 18px 0;
+	}
+	#nav-toggle {
+		display: block;
+	}
+	/* #nav-toggle 切り替えアニメーション */
+	.open #nav-toggle span:nth-child(1) {
+		top: 11px;
+		-webkit-transform: rotate(315deg);
+		-moz-transform: rotate(315deg);
+		transform: rotate(315deg);
+	}
+	.open #nav-toggle span:nth-child(2) {
+		width: 0;
+		left: 50%;
+	}
+	.open #nav-toggle span:nth-child(3) {
+		top: 11px;
+		-webkit-transform: rotate(-315deg);
+		-moz-transform: rotate(-315deg);
+		transform: rotate(-315deg);
+	}
+	/* #global-nav スライドアニメーション */
+	.open #global-nav {
+		/* #global-nav top + #mobile-head height */
+		-moz-transform: translateY(556px);
+		-webkit-transform: translateY(556px);
+		transform: translateY(556px);
+	}
+
+
+}
+
+   
     .box {
       display:flex;
       flex-direction: row;
@@ -613,6 +871,8 @@ margin:10px 0 60px 0;
     .right{
       margin-right:4%;/*テキスト60　テキストの右４　画像36%　余白をつけないと画像がよっちゃう*/
     }
+
+
     @media (max-width:768px) {
       .box {
         flex-direction: column;
@@ -641,4 +901,20 @@ margin:10px 0 60px 0;
         width:100%;
         height:auto;
       }
+
+
+
+      .card {
+  
+        margin:0 auto 30px auto;
+      }
+      .card-habit {
+  
+        margin:0 auto 30px auto;
+      }
     }
+
+
+    
+
+    
