@@ -196,29 +196,32 @@ p{
 .catch-copy{
   color: #fff;
   line-height: 1.6;
-  min-width:400px;
-  margin:0 auto;
-  width:1200px;
- 
+  min-width:400px;  
+ max-width:1200px;
+ position:relative
   /*text-align: center;*/
 }
 
 
 .hero h1{
-margin:30px 0 0 10%;
+  position:absolute;
+  top:16vh;
+  left:20vw;
 font-size:40px;
 line-height:1;
  color:#FFF;
  width:100%;
- display:inline-block;
+ display:block;
 }
 
 .hero h3{
-  margin:30vh 0 0 10vw;
+  position:absolute;
+  top:10vh;
+  left:20vw;
 font-size:24px;
 line-height:1;
 width:100%;
-display:inline-block;
+display:block;
 }
 
  main{
