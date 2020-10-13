@@ -47,16 +47,36 @@
         // Nav Toggle Button
         $('#nav-toggle').click(function () {
           $header.toggleClass('open');
+          console.log("open");
         });
       });
     })(jQuery);
+    $(function () {
+
+      var pos = 0;
+      var header = $('header');
+      var hideClass = 'hideClass';
+
+      $(window).on('scroll', function () {
+        if ($(this).scrollTop() < pos) {
+          //上スクロール時ヘッダーのhideClassを削除
+          header.removeClass(hideClass);
+        } else {
+          //下スクロール時ヘッダーにhideClassを追加
+          header.addClass(hideClass);
+        }
+        pos = $(this).scrollTop();
+      });
+
+    });
+
   </script>
 </head>
 
 <body>
 
 
-  <header id="top-head">
+  <header id="top-head" class="site-header">
     <div class="inner">
       <div id="mobile-head">
         <h1 class="logo">Logo</h1>
@@ -70,38 +90,32 @@
       </div>
       <nav id="global-nav">
         <ul>
-          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">ABOUT</a></li>
-          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">STORY</a></li>
-          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">VIDEO</a></li>
-          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">GALLERY</a></li>
-          <li><a href="https://www.webopixel.net/lab/sample/15/1207responsive-nav/#">CREATOR</a></li>
+          <li><a class="here" href="#about">ABOUT</a></li>
+          <li><a href="#story">STORY</a></li>
+          <li><a href="#video">VIDEO</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#creator">CREATOR</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
 
-  <!--<header id="header" class="header">
-    <ul class="nav-list">
-      <li class="nav-list-item"><a class="here" href="#about">ABOUT</a></li>
-      <li class="nav-list-item"><a href="#story">STORY</a></li>
-      <li class="nav-list-item"><a href="#video">VIDEO</a></li>
-      <li class="nav-list-item"><a href="#gallery">GALLERY</a></li>
-      <li class="nav-list-item"><a href="#creator">CREATOR</a></li>
-      <li class="language">
 
-        <span id="language-text">language</span><a class="here" href="./index.html">JA</a><span>|</span><a
-          href="./index-en.html">EN</a>
-
-      </li>
-    </ul>
-
-  </header>-->
-  <div class="first-view">
+  <!-- <div class="first-view">
     <h3>離れて見守ってみてください</h3>
     <h1>小人のすみか</h1>
-  </div>
+  </div>-->
 
+
+  <div class="hero">
+    <div class="catch-copy">
+      <h3>離れて見守ってみてください</h3>
+      <h1>小人のすみか</h1>
+    </div>
+
+    <!--catch-copy-->
+  </div>
 
   <main>
 
@@ -240,61 +254,62 @@
       <!--GALLERY-->
       <div class="eachSection">
         <a class="sectionTitle" name="gallery">GALLERY</a>
-
+        <!--画像は10:6(1000x600px推奨)で-->
 
         <div id="slider" class="swiper-container swiper-container-horizontal">
           <div class="swiper-wrapper" style="transform: translate3d(-2280px, 0px, 0px); transition-duration: 0ms;">
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img01.jpg" alt="">
             </div>
-            <div class="swiper-slide swiper-slide-prev" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide swiper-slide-prev" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide swiper-slide-active" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide swiper-slide-active" style="width: 800px;"><img src="img/img03.jpg" alt="">
             </div>
-            <div class="swiper-slide swiper-slide-next" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide swiper-slide-next" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="width: 800px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="width: 800px;"><img src="img/img02.jpg" alt="">
             </div>
 
           </div>
           <div class="swiper-button-prev swiper-button-white"></div>
           <div class="swiper-button-next swiper-button-white"></div>
         </div>
+        
 
         <div id="thumbs" class="swiper-container swiper-container-horizontal">
           <div class="swiper-wrapper" style="transform: translate3d(-20px, 0px, 0px); transition-duration: 0ms;">
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide swiper-slide-prev" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide swiper-slide-prev" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide swiper-slide-active" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg"
-                alt=""></div>
-            <div class="swiper-slide swiper-slide-next" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide swiper-slide-active" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide swiper-slide-next" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
-            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/IMG_1109.jpeg" alt="">
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
+            </div>
+            <div class="swiper-slide" style="margin-right: 10px;"><img src="img/img02.jpg" alt="">
             </div>
 
           </div>
@@ -390,4 +405,6 @@
   Special Thaks
   https://www.willstyle.co.jp/blog/724/
   https://niwaka-web.com/flexbox_reverse02/
+  https://www.webopixel.net/javascript/1060.html
+  https://into-the-program.com/upper-lower-scroll/
 -->
