@@ -49,6 +49,9 @@
        margin:20px 0 30px 0;
        text-align: center;
        display:block;
+       pointer-events: none;
+
+    
      }
      .sectionTitle:before {
       content: '';
@@ -203,8 +206,7 @@ p{
   /*text-align: center;*/
 }
 
-
-.hero h1{
+.hero img{
   position:absolute;
   top:16vh;
   left:20vw;
@@ -213,6 +215,8 @@ line-height:1;
  color:#FFF;
  width:100%;
  display:block;
+ width:400px;
+ height:auto;
 }
 
 .hero h3{
@@ -594,22 +598,36 @@ margin:10px 0 60px 0;
 }
 #top-head .logo {
 	float: left;
-	font-size: 36px;
+  font-size: 36px;
+  width:200px;
+  height:auto;
+  visibility:hidden
+}
+#global-nav {
+  margin:10px auto 0px auto;
+  max-width:1200px;
+
+
 }
 #global-nav ul {
 	list-style: none;
-	position: absolute;
+	/*position: absolute;*/
 	right: 0;
 	bottom: 0;
-	font-size: 14px;
+  font-size: 14px;
+  display:flex;
+  justify-content: space-around;
 }
 #global-nav ul li {
-	float: left;
-	position: relative;
+/*	float: left;*/
+  position: relative;
+ 
 }
 #global-nav ul li a {
-  padding: 0 30px;
+  /*padding: 0 30px;*/
+ 
   font-size:20px;
+
 }
 
 /* Btn Hover */
@@ -650,7 +668,7 @@ margin:10px 0 60px 0;
 }
 #top-head.fixed .logo {
 	font-size: 24px;
-	color: #333;
+  color: #333;
 }
 #top-head.fixed #global-nav ul li a {
 	color: #333;
@@ -659,11 +677,11 @@ margin:10px 0 60px 0;
 
 /* Fixed Btn Hover */
 #top-head.fixed #global-nav ul li:after {
-	bottom: -10px;
+	bottom: -20px;
 }
 #top-head.fixed #global-nav ul li:hover:after {
 	background: #FFB30B;
-	bottom: -20px;
+	bottom: -10px;
 }
 
 
@@ -778,7 +796,8 @@ margin:10px 0 60px 0;
 		left: 13px;
 		top: 13px;
 		color: #333;
-		font-size: 26px;
+    font-size: 26px;
+    visibility:hidden
 	}
 
 	#global-nav {
@@ -844,6 +863,12 @@ margin:10px 0 60px 0;
   
   .card-habit{
     width:360px;
+  }
+
+  .hero img{
+ 
+   width:70vw;
+   height:auto;
   }
 
 
