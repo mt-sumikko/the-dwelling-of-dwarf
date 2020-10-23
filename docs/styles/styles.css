@@ -798,9 +798,11 @@ margin:10px 0 60px 0;
 		color: #333;
     font-size: 26px;
     visibility:hidden
-	}
+  }
+  
 
 	#global-nav {
+    margin:0;
 		position: absolute;
 		/* 開いてないときは画面外に配置 */
 		top: -500px;
@@ -817,7 +819,8 @@ margin:10px 0 60px 0;
 		position: static;
 		right: 0;
 		bottom: 0;
-		font-size: 11px;
+    font-size: 11px;
+    display:block;
 	}
 	#global-nav ul li {
 		float: none;
