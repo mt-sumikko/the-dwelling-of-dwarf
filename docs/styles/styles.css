@@ -43,7 +43,7 @@
    a.sectionTitle {
     position: relative;
        font-weight: 400;
-       letter-spacing:0.07em;
+      /* letter-spacing:0.07em;*/
        font-size: 36px;
        color: #FFF;
        margin:20px 0 40px 0;
@@ -104,10 +104,10 @@
 
  
  body{
-  background-color:#403D3D;/*#0e607c*/
+  background-color:#1b1717;/*#0e607c*/
   margin: 0px auto;
 
-  font-family: 'Source Sans Pro',"TBちび丸ゴシックPlusK R","Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","遊ゴシック",sans-serif;
+  font-family: 'Source Code Pro',"TBちび丸ゴシックPlusK R","Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","遊ゴシック",sans-serif;
 
  
   }
@@ -189,18 +189,18 @@ p{
 
  .hero{
   align-items: center;
-    background:url(../img/andonSample.png) no-repeat;
+    background:url(../img/IMG_2108.JPG) no-repeat;
     background-position: 50% 50%;
     background-size: cover;
   display: flex;
     height: 100vh;
-  justify-content: left;
+  justify-content: right;
   
 }
 .catch-copy{
   color: #fff;
   line-height: 1.6;
-  min-width:400px;  
+  min-width:70vw; 
  max-width:1200px;
  position:relative
   /*text-align: center;*/
@@ -215,7 +215,7 @@ line-height:1;
  color:#FFF;
  width:100%;
  display:block;
- width:400px;
+ width:30vw;
  height:auto;
 }
 
@@ -501,7 +501,7 @@ div.leftText{
       margin: 0 10px;
     }
     .card-link a:hover {
-      color: #0090aa;
+      color: #ffce65;
     }
     .logoType{
       text-align:center;
@@ -530,42 +530,15 @@ margin:10px 0 60px 0;
 
 
 
-/*スライドショー*/
-
-
-		.swiper-container {
-			text-align: center;
-		}
-
-		.swiper-container .swiper-slide img {
-			max-width: 100%;
-			width: 100%;
-			height: auto;
-		}
-
-		.prettyprint {
-			border: none;
-			background: #fafafa;
-			color: #697d86;
-		}
-
-		#thumbs {
-			height: 20%;
-			box-sizing: border-box;
-			padding: 10px 0;
-		}
-
-		#thumbs .swiper-slide {
-			width: 20%;
-			height: 100%;
-			opacity: 0.6;
-			cursor: pointer;
-		}
-
-		#thumbs .swiper-slide-active {
-			opacity: 1;
+    .slider-for img{
+      max-width:800px;
+      width:100vw;
     }
-    
+    .slider-nav img{
+max-width:130px;
+      width:12vw;
+    }
+
 /*メニュー*/
 .inner {
 	width: 1200px;
@@ -668,10 +641,10 @@ margin:10px 0 60px 0;
 }
 #top-head.fixed .logo {
 	font-size: 24px;
-  color: #333;
+  color: rgba(27,23,23,0.8);
 }
 #top-head.fixed #global-nav ul li a {
-	color: #333;
+	color:  rgba(27,23,23,0.8);
 	padding: 0 20px;
 }
 
@@ -708,7 +681,7 @@ margin:10px 0 60px 0;
 	position: absolute;
 	height: 4px;
 	width: 100%;
-	background: #666;
+	background: rgba(27,23,23,0.8);
 	left: 0;
 	-webkit-transition: .35s ease-in-out;
 	-moz-transition: .35s ease-in-out;
@@ -806,7 +779,7 @@ margin:10px 0 60px 0;
 		position: absolute;
 		/* 開いてないときは画面外に配置 */
 		top: -500px;
-		background: #333;
+		background: rgba(27,23,23,0.8);
 		width: 100%;
 		text-align: center;
 		padding: 10px 0;
@@ -949,5 +922,11 @@ margin:10px 0 60px 0;
       }
     }
 
+
+
+
+
+
+    
 
    

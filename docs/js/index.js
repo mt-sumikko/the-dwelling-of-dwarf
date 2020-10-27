@@ -28,20 +28,25 @@ topButton.onclick = function () {
 
 
 
-/*---------swiper.js　スライドショー-------------*/
-var slider = new Swiper('#slider', {
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev'
-})
-var thumbs = new Swiper('#thumbs', {
-    centeredSlides: true,
-    spaceBetween: 10,
-    slidesPerView: "auto",
-    touchRatio: 0.2,
-    slideToClickedSlide: true
+/*---------slick.js　スライドショー-------------*/
+
+$(function () {
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true,
+    });
 });
-slider.params.control = thumbs;
-thumbs.params.control = slider;
 
 
 
