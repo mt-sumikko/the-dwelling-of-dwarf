@@ -29,8 +29,7 @@ topButton.onclick = function () {
 
 
 /*---------slick.js　スライドショー-------------*/
-
-var mySwiper = new Swiper('.swiper-container', {
+/*var mySwiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 2,
     spaceBetween: 10,
@@ -44,4 +43,12 @@ var mySwiper = new Swiper('.swiper-container', {
             spaceBetween: 0
         }
     }
+})*/
+
+var mySwiper = new Swiper('.swiper-container', {
+    effect: "slide",
+    loop: true,
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
 })
