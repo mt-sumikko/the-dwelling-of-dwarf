@@ -30,24 +30,18 @@ topButton.onclick = function () {
 
 /*---------slick.js　スライドショー-------------*/
 
-$(function () {
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        dots: true,
-        centerMode: true,
-        focusOnSelect: true,
-    });
-});
-
-
-
-
+var mySwiper = new Swiper('.swiper-container', {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    centeredSlides: true,
+    pagination: '.swiper-pagination',
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    breakpoints: {
+        767: {
+            slidesPerView: 1,
+            spaceBetween: 0
+        }
+    }
+})
