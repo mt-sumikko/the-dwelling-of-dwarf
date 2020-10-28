@@ -70,12 +70,6 @@
 
   
 
-   .page-description{
-     display:inline-block;
-     margin: 30px 0px 0 40px;
-     color:#646464;
-  
-   }
    /*  p{
        font-size: 16px;
      }*/
@@ -104,7 +98,7 @@
 
  
  body{
-  background-color:#1b1717;/*#0e607c*/
+  background-color:#132444;/*#0e607c*/
   margin: 0px auto;
 
   font-family: 'Source Code Pro',"TBちび丸ゴシックPlusK R","Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","遊ゴシック",sans-serif;
@@ -262,13 +256,7 @@ display:block;
            width: 30px;
            height: auto; 
          }
-  .scroll-top p {
-  font-size: 17px;
-  color: #535353;
-  font: bold 15pt "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 0.5px;
-  padding-top: 8px; 
-         }
+ 
  
 
  
@@ -297,7 +285,7 @@ display:block;
 .arrow:hover {
   opacity: 0.8;
   bottom: 15px;
-  -webkit-filter: drop-shadow(3px 3px 3px #828282);
+  -webkit-filter: drop-shadow(3px 3px 3px #333);
 }
 .arrow:before, .arrow:after {
 }
@@ -321,6 +309,7 @@ padding:30px 0 0 0;
   text-align: center;/*1行ものには必要*/
   margin: 30px auto;
   max-width:800px;
+  font-size:18px;
 }
 
 
@@ -371,6 +360,9 @@ div.leftText{
  margin-left:20px;
 }
 
+.text p{
+  font-size:18px;
+}
 
 
 .youtube-wrap {
@@ -438,7 +430,7 @@ div.leftText{
  /*background-color:#FFF;*/
  font-size:24px;
  border:2px solid  #FFB30B;
- margin:0 auto;
+ margin:10px auto;
 }
 .habit-title{
   font-size:20px;
@@ -494,6 +486,7 @@ div.leftText{
       text-align: center;
       border-top: 1px solid  #FFB30B;
       padding: 20px;
+      margin:0 20px;
     }
     .card-link a {
       text-decoration: none;
@@ -633,7 +626,7 @@ max-width:130px;
 	padding-top: 10px;
 	height: 44px;
 	background: #fff;
-	background: rgba(255,255,255,.7);
+	background: rgba(255,255,255,0.7);
 
 	transition: top 0.65s ease-in;
 	-webkit-transition: top 0.65s ease-in;
@@ -641,10 +634,10 @@ max-width:130px;
 }
 #top-head.fixed .logo {
 	font-size: 24px;
-  color: rgba(27,23,23,0.8);
+  color: rgba(19,36,68,0.8);
 }
 #top-head.fixed #global-nav ul li a {
-	color:  rgba(27,23,23,0.8);
+	color:  rgba(19,36,68,0.8);
 	padding: 0 20px;
 }
 
@@ -681,7 +674,8 @@ max-width:130px;
 	position: absolute;
 	height: 4px;
 	width: 100%;
-	background: rgba(27,23,23,0.8);
+  background: rgba(19,36,68,0.8);
+  border-radius:4px;
 	left: 0;
 	-webkit-transition: .35s ease-in-out;
 	-moz-transition: .35s ease-in-out;
@@ -810,7 +804,7 @@ max-width:130px;
 		position: absolute;
 		/* 開いてないときは画面外に配置 */
 		top: -500px;
-		background: rgba(27,23,23,0.8);
+		background: rgba(19,36,68,0.8);
 		width: 100%;
 		text-align: center;
 		padding: 10px 0;
