@@ -717,6 +717,37 @@ max-width:130px;
 }
 
 
+
+
+/*スライドショー*/
+    
+.sample06 .main {
+  margin-bottom: 10px;
+}
+
+.sample06 .thumbnail .swiper-slide {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.sample06 .thumbnail .swiper-slide-active {
+  opacity: 1;
+}
+
+.sample06 .thumbnail .swiper-wrapper{
+  margin-left: calc(-37.5% - 5px);
+}
+
+/*紹介されてるソースに加えて、画像の幅指定しないとすごいことに*/
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+
+
 @media screen and (max-width: 1200px) {
 	article {
 		padding: 0 30px;
@@ -925,10 +956,3 @@ max-width:130px;
 
 
 
-
-
-    
-
-    .swiper-slide img{
-      max-width: 800px;
-    }

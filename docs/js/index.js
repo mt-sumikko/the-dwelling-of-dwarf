@@ -28,27 +28,25 @@ topButton.onclick = function () {
 
 
 
-/*---------slick.js　スライドショー-------------*/
-/*var mySwiper = new Swiper('.swiper-container', {
-    loop: true,
-    slidesPerView: 2,
-    spaceBetween: 10,
-    centeredSlides: true,
-    pagination: '.swiper-pagination',
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-    breakpoints: {
-        767: {
-            slidesPerView: 1,
-            spaceBetween: 0
-        }
-    }
-})*/
+/*---------Swiper.js　スライドショー-------------*/
 
-var mySwiper = new Swiper('.swiper-container', {
-    effect: "slide",
-    loop: true,
-    pagination: '.swiper-pagination',
-    nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev',
-})
+window.addEventListener('DOMContentLoaded', function () {
+    var swiper06Main = new Swiper('.sample06 .main', {
+        /*loop: true,*/
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10,
+    })
+
+    var swiper06Thumb = new Swiper('.sample06 .thumbnail', {
+        /*loop: true,*/
+        spaceBetween: 10,
+        centeredSlides: true,
+        slidesPerView: 4,
+        slideToClickedSlide: true
+    });
+    swiper06Main.params.control = swiper06Thumb;
+    swiper06Thumb.params.control = swiper06Main;
+}, false);

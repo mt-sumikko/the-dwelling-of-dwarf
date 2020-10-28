@@ -4,8 +4,8 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/websaite#">
   <meta charset="utf-8">
   <title>小人のすみか — ODENKI</title>
+  <link rel="stylesheet" href="styles/swiper.min.css">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" type="text/css" href="styles/swipebox.css">
 
 
 
@@ -25,14 +25,15 @@
   <link rel="icon" href="./img/favicon.ico" />
   <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon-180x180.png" sizes="180x180">
   <link rel="icon" type="image/png" href="./img/favicons/android-chrome-192x192.png" sizes="192x192">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
-  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <!--font-->
   <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?5f212f1631a04631a9715ceee90393a3"
     charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+  <!--JS-->
+  <script src="./js/swiper.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
   <script>
     (function ($) {
       $(function () {
@@ -226,25 +227,37 @@
       <!--GALLERY-->
       <div class="eachSection">
         <a class="sectionTitle" name="gallery">GALLERY</a>
+        <div class="sample sample06">
+          <div class="swiper-container main">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/IMG_1901.jpg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1109.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1110.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1112.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1901.jpg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1109.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1110.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1112.jpeg"></div>
+            </div>
 
-        <div class="swiper-container">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img src="./img/IMG_1850.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/IMG_1850.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/IMG_1850.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/IMG_1850.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/IMG_1850.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="./img/IMG_1850.jpg" alt=""></div>
-            ...
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-container thumbnail">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="./img/IMG_1901.jpg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1109.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1110.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1112.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1901.jpg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1109.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1110.jpeg"></div>
+              <div class="swiper-slide"><img src="./img/IMG_1112.jpeg"></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -331,9 +344,6 @@
 
   </div>
   <script src="js/index.js"></script>
-  <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>-->
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
   <!--読み込み最後じゃないと失敗するっぽい-->
 </body>
 
@@ -348,4 +358,5 @@
   https://webdesignday.jp/inspiration/technique/css/3876/
   https://www.netshop7.com/blog2/kasaneru-css/
   https://www.willstyle.co.jp/blog/724/
+  https://xn--web-oi9du9bc8tgu2a.com/js-swiper-sample/
 -->
