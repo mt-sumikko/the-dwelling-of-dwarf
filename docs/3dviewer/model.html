@@ -38,7 +38,7 @@
             camera.position.set(100, 200, 300);
 
             scene = new THREE.Scene();
-            scene.background = new THREE.Color(0xa0a0a0);
+            scene.background = new THREE.Color(0x1166a9/*0xa0a0a0*/);
             scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000);
 
             const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
@@ -65,11 +65,11 @@
             const grid = new THREE.GridHelper(2000, 20, 0x000000, 0x000000);
             grid.material.opacity = 0.2;
             grid.material.transparent = true;
-            scene.add(grid);
+            // scene.add(grid);
 
             // model
             const loader = new FBXLoader();
-            loader.load('./img/Lantern_forWeb.fbx', function (object) {
+            loader.load('./Lantern_forWeb.fbx', function (object) {
 
                 mixer = new THREE.AnimationMixer(object);
 
