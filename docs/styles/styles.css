@@ -471,7 +471,7 @@ div.leftText{
 
 }
 .head{
-  font-family: "TBちび丸ゴシックPlusK H";
+margin-bottom:4px;
 
 }
 .name-en{
@@ -491,6 +491,7 @@ div.leftText{
       font-size: 16px;
       line-height: 1.5;
       text-align:left;
+      text-align:center;
     }
     
     .card-link {
@@ -729,8 +730,7 @@ max-width:130px;
 
 /*スライドショー*/
 .sample06 {
- 
-  position:relative;/*posiiton:static(default）だとz-indexの意味がない*/
+  position:relative;/*posiiton:static(default）だとz-indexが効かない*/
   z-index:10;
 }  
 .sample06 .main {
