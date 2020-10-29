@@ -729,7 +729,9 @@ max-width:130px;
 
 /*スライドショー*/
 .sample06 {
-  z-index:-100;
+ 
+  position:relative;/*posiiton:static(default）だとz-indexの意味がない*/
+  z-index:10;
 }  
 .sample06 .main {
   margin-bottom: 10px;
