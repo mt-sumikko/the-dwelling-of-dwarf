@@ -210,6 +210,7 @@ line-height:1;
  display:block;
  width:30vw;
  max-width:400px;
+ min-width:300px;
  height:auto;
 }
 
@@ -313,32 +314,36 @@ padding:30px 0 0 0;
 
 
 
+/*左右交互に表示*/
+   
+.box {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
-.side-by-side_container {
-  /*  max-width: 900px;*/
-     margin: 0 auto;
-     /*align-items:center;*/
-     display:flex;
-     align-items: flex-start;
-     text-align:justify;
-     flex-wrap: wrap;
-   }
+.pict {
+  width: 36%;
+ /* margin-left: 3%;*/
+}
 
- .side-by-side_container img {
-       position: relative;
-       width: 40%;
-       min-width:200px;
-       height: auto;
-       display:inline-block;
-       
-   }
+.pict img {
+  width: 100%;
+  height:auto;
+  /*こうやって要素のサイズを明示しておかないと崩れる*/
+}
 
-   .rightText-div{
-     width:50%;
-     min-width:350px;
-     display:inline-block;
-   }
+.box-second {
+  flex-direction: row-reverse;
+}
+
+.text{
+max-width:60%;
+}
+.right{
+  margin-right:4%;/*テキスト60　テキストの右４　画像36%　余白をつけないと画像がよっちゃう*/
+}
 
 
    i{
@@ -709,7 +714,10 @@ max-width:130px;
   transform: translateY(-100px);
 }
 
-
+.model-link{
+  text-align:center;
+  margin: 30px auto;
+}
 
 
 /*スライドショー*/
@@ -738,7 +746,6 @@ max-width:130px;
   vertical-align: middle;
   line-height: 1;
 }
-
 
 
 @media screen and (max-width: 1200px) {
@@ -873,50 +880,25 @@ max-width:130px;
   }
 
   .hero img{
-    top:60vh;
     left:20vw;
    width:60vw;
    max-width:360px;
+   min-width:30vw;
   }
   
   .hero h3{
     left:20vw;
-  font-size:20px;
+  font-size:16px;
   text-align:center;
   }
 
+  .arrow {
+    right: 0px;
+    bottom: 0px;
+  }
 
 }
 
-   
-    .box {
-      display:flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    
-  
-    .pict {
-      width: 36%;
-     /* margin-left: 3%;*/
-    }
-    
-    .pict img {
-      width: 100%;
-      height:auto;
-      /*こうやって要素のサイズを明示しておかないと崩れる*/
-    }
-    
-    .box-second {
-      flex-direction: row-reverse;
-    }
- 
-    .text{
-   max-width:60%;
-    }
-    .right{
-      margin-right:4%;/*テキスト60　テキストの右４　画像36%　余白をつけないと画像がよっちゃう*/
-    }
 
 
     @media (max-width:768px) {
