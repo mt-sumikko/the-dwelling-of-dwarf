@@ -29,7 +29,7 @@ topButton.onclick = function () {
 
 
 /*---------Swiper.js　スライドショー-------------*/
-/*
+
 window.addEventListener('DOMContentLoaded', function () {
     var swiper06Main = new Swiper('.sample06 .main', {
 
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function () {
     })
 
     var swiper06Thumb = new Swiper('.sample06 .thumbnail', {
-     
+
         spaceBetween: 10,
         centeredSlides: true,
         slidesPerView: 4,
@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
     swiper06Main.params.control = swiper06Thumb;
     swiper06Thumb.params.control = swiper06Main;
-}, false);*/
+}, false);
 
 /*
 $(function () {
@@ -118,8 +118,8 @@ var galleryTop = new Swiper('.gallery-top', {
     },
 });*/
 
-
-//initialize swiper when document ready  
+/*
+//initialize swiper when document ready
 var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     direction: 'horizontal',
@@ -130,4 +130,4 @@ var mySwiper = new Swiper('.swiper-container', {
     // If we need pagination
     pagination: '.swiper-pagination',
 
-});
+});*/

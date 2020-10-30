@@ -728,10 +728,8 @@ max-width:130px;
 }
 
 
-/*スライドショー
-.sample06 {
+/*Swiper.js responsiveスライドショー*/
 
-}  
 .sample06 .main {
   margin-bottom: 10px;
 }
@@ -749,15 +747,15 @@ max-width:130px;
   margin-left: calc(-37.5% - 5px);
 }
 
-/*紹介されてるソースに加えて、画像の幅指定しないとすごいことに
+/*紹介されてるソースに加えて、画像の幅指定しないとすごいことに*/
 .swiper-slide img {
   width: 100%;
   height: auto;
   vertical-align: middle;
   line-height: 1;
-}*/
+}
 
-
+/*
 .swiper-container {
  width:100%;
 }
@@ -765,7 +763,7 @@ max-width:130px;
 
 .swiper-slide img{
   max-width:800px;
-}
+}*/
 
 /*3Dモデルビューリンクボタンデザイン*/
 .btn-border {
