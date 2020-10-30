@@ -411,7 +411,7 @@ div.leftText{
 .card-habit{
   width: 240px;
   /*background: #fff;*/
-  border-radius: 5px;
+  border-radius: 4px;
   /*box-shadow: 0 2px 5px #ccc;*/
   text-align:center;
   border: 2px solid  #FFB30B;
@@ -444,7 +444,7 @@ div.leftText{
      .card {
       width: 360px;
       /*background: #fff;*/
-      border-radius: 5px;
+      border-radius: 4px;
       /*box-shadow: 0 2px 5px #ccc;*/
       text-align:center;
       border: 2px solid  #FFB30B;
@@ -724,7 +724,7 @@ max-width:130px;
 
 .model-link{
   text-align:center;
-  margin: 30px auto;
+  margin: 60px auto 0 auto;
 }
 
 
@@ -759,6 +759,26 @@ max-width:130px;
 }
 
 
+/*3Dモデルビューリンクボタンデザイン*/
+.btn-border {
+  display: inline-block;
+  max-width: 180px;
+  text-align: left;
+  border: 2px solid  #FFB30B;
+  font-size: 16px;
+  color:  #FFB30B;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: .2s;
+}
+
+.btn-border:hover {
+  background-color:  #FFB30B;
+  border-color:  #FFB30B;
+  color: #FFF;
+}
 @media screen and (max-width: 1200px) {
 	article {
 		padding: 0 30px;
