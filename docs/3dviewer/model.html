@@ -38,8 +38,8 @@
             camera.position.set(100, 200, 300);
 
             scene = new THREE.Scene();
-            scene.background = new THREE.Color(0x1166a9/*0xa0a0a0*/);
-            scene.fog = new THREE.Fog(0xa0a0a0, 200, 1000);
+            scene.background = new THREE.Color(0xeeeeee/*0xa0a0a0*/);
+            scene.fog = new THREE.Fog(0xa0a0a0, 1500, 3000);
 
             const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444);
             hemiLight.position.set(0, 200, 0);
@@ -60,7 +60,7 @@
             const mesh = new THREE.Mesh(new THREE.PlaneBufferGeometry(2000, 2000), new THREE.MeshPhongMaterial({ color: 0x999999, depthWrite: false }));
             mesh.rotation.x = - Math.PI / 2;
             mesh.receiveShadow = true;
-            scene.add(mesh);
+            //scene.add(mesh);
 
             const grid = new THREE.GridHelper(2000, 20, 0x000000, 0x000000);
             grid.material.opacity = 0.2;
@@ -69,7 +69,7 @@
 
             // model
             const loader = new FBXLoader();
-            loader.load('./Lantern_forWeb.fbx', function (object) {
+            loader.load('./Lantern_forWeb_LookAr.fbx', function (object) {
 
                 mixer = new THREE.AnimationMixer(object);
 
