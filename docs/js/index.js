@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 10,
         centeredSlides: true,
         slidesPerView: 4,
-        slideToClickedSlide: true
+        slideToClickedSlide: true,
     });
     swiper06Main.params.control = swiper06Thumb;
     swiper06Thumb.params.control = swiper06Main;
