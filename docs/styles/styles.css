@@ -638,7 +638,7 @@ max-width:130px;
 	padding-top: 10px;
 	height: 44px;
 	background: #fff;
-	background: rgba(255,255,255,0.7);
+	background: rgba(255,255,255,0.8);
 
 	transition: top 0.65s ease-in;
 	-webkit-transition: top 0.65s ease-in;
@@ -759,34 +759,9 @@ max-width:130px;
 
 
 .swiper-container {
-  width: 600px;
-  height: 300px;
+ width:100%;
 }
 
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-
-.gallery-top {
-  height: 80%;
-  width: 100%;
-}
-
-.gallery-thumbs {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-
-.gallery-thumbs .swiper-slide {
-  height: 100%;
-  opacity: 0.4;
-}
-
-.gallery-thumbs .swiper-slide-thumb-active {
-  opacity: 1;
-}
 
 .swiper-slide img{
   max-width:800px;

@@ -95,7 +95,7 @@ https://www.proglad.tokyo/2017/08/slickjs-uncaught-typeerror-cannot-read.html */
 
 
 
-
+/*
 var galleryThumbs = new Swiper('.gallery-thumbs', {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -116,4 +116,18 @@ var galleryTop = new Swiper('.gallery-top', {
     thumbs: {
         swiper: galleryThumbs,
     },
+});*/
+
+
+//initialize swiper when document ready  
+var mySwiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: 2000,
+    speed: 2000,
+    effect: 'fade',
+    // If we need pagination
+    pagination: '.swiper-pagination',
+
 });
