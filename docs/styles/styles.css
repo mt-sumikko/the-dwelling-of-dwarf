@@ -756,15 +756,6 @@ max-width:130px;
 }
 
 
-.swiper-container {
- width:100%;
-}
-
-
-.swiper-slide img{
-  max-width:800px;
-}
-
 /*3Dモデルビューリンクボタンデザイン*/
 .btn-border {
   display: inline-block;
