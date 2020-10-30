@@ -16,11 +16,13 @@
      
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-    <script src="../build/three.min.js"></script>
-    <script src="js/OrbitControls.js"></script>
-    <script src="js/OBJLoader.js"></script>
-    <script src="js/MTLLoader.js"></script>
-     
+    <script src="three/three.min.js"></script>
+
+    <!-- 追加 -->
+    <script src="three/OrbitControls.js"></script>
+    <script src="three/OBJLoader.js"></script>
+    <script src="three/MTLLoader.js"></script>
+
     <script>$(function () {
             //基本設定
             var width = 900;
@@ -50,11 +52,11 @@
             controls.autoRotate = true;
 
             // ★追加 MTL,Obj読み込み
-            new THREE.MTLLoader().setPath('./img/')
+            new THREE.MTLLoader().setPath('./')
                 .load('Lantern_kobit.mtl',
                     function (materials) {
                         materials.preload();
-                        new THREE.OBJLoader().setPath('./img/').setMaterials(materials).load('Lantern_kobit.obj',
+                        new THREE.OBJLoader().setPath('./').setMaterials(materials).load('Lantern_kobit.obj',
                             function (object) {
                                 objmodel = object.clone();
                                 obj = new THREE.Object3D();
