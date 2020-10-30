@@ -728,10 +728,9 @@ max-width:130px;
 }
 
 
-/*スライドショー*/
+/*スライドショー
 .sample06 {
-  position:relative;/*posiiton:static(default）だとz-indexが効かない*/
-  z-index:10;
+
 }  
 .sample06 .main {
   margin-bottom: 10px;
@@ -750,14 +749,48 @@ max-width:130px;
   margin-left: calc(-37.5% - 5px);
 }
 
-/*紹介されてるソースに加えて、画像の幅指定しないとすごいことに*/
+/*紹介されてるソースに加えて、画像の幅指定しないとすごいことに
 .swiper-slide img {
   width: 100%;
   height: auto;
   vertical-align: middle;
   line-height: 1;
+}*/
+
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
 }
 
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img{
+  max-width:800px;
+}
 
 /*3Dモデルビューリンクボタンデザイン*/
 .btn-border {
@@ -972,7 +1005,5 @@ max-width:130px;
         margin:0 auto 30px auto;
       }
     }
-
-
 
 
