@@ -776,6 +776,10 @@ max-width:130px;
   border-color:  #FFB30B;
   color: #FFF;
 }
+
+
+
+
 @media screen and (max-width: 1200px) {
 	article {
 		padding: 0 30px;
