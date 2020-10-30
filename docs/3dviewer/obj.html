@@ -1,98 +1,130 @@
-<!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
+<!--Special Thanks to https://codepen.io/eeonk/pen/GxrMdG-->
 
 <head>
-     
-    <meta charset="UTF-8">
-     
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-     <title>three.js</title>
-     
-    <meta name="robots" content="noindex,follow">
+    <title>three.js webgl - OBJLoader + MTLLoader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 </head>
 
 <body>
-     <canvas id="canvas"></canvas>
-     
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- Three.js r79 -->
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r79/build/three.js"></script>
+    <!-- MTLLoader.js -->
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r79/examples/js/loaders/MTLLoader.js"></script>
+    <!-- OBJLoader.js -->
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r79/examples/js/loaders/OBJLoader.js"></script>
+    <!-- OrbitControls.js -->
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r79/examples/js/controls/OrbitControls.js"></script>
 
-    <script src="three/three.min.js"></script>
+    <script>
+        var camera, scene, renderer, mouse2D, controls,
+            radius = 150,
+            theta = 45,
+            phi = 0,
+            width = window.innerWidth,
+            height = window.innerHeight,
+            lastAnimTime = window.performance.now(),
+            RENDER_INTERVAL = 30,
+            TICK_INTERVAL = 500;
 
-    <!-- 追加 -->
-    <script src="three/OrbitControls.js"></script>
-    <script src="three/OBJLoader.js"></script>
-    <script src="three/MTLLoader.js"></script>
+        var assetsPath = './';
 
-    <script>$(function () {
-            //基本設定
-            var width = 900;
-            var height = 900;
+        loadOBJ();
+        init();
+        // start();
+        render();
 
-            var renderer = new THREE.WebGLRenderer({
-                canvas: document.querySelector("#canvas"),
-                alpha: true
-            });
-            renderer.setPixelRatio(window.devicePixelRatio);
+        function init() {
+
+            // renderer ------------------------------
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setClearColor(0xaaaaaa); // 背景色
             renderer.setSize(width, height);
-            var scene = new THREE.Scene();
+            document.body.appendChild(renderer.domElement);
 
-            // カメラ設定
-            var camera = new THREE.PerspectiveCamera(3, width / height, 1, 10000);
-            camera.position.set(1, 300, 500);
+            // scene ------------------------------
+            scene = new THREE.Scene();
 
-            // ライト設定
-            ambientLight = new THREE.AmbientLight(0xffffff);
-            hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x4169e1, 0.15);
-            scene.add(hemisphereLight);
-            scene.add(ambientLight);
+            // camera ------------------------------
+            var perscamera = new THREE.PerspectiveCamera(45, width / height, 1, 10000); // fov(視野角),aspect,near,far
+            var orthocamera = new THREE.OrthographicCamera(width / -2, width / 2, height / 2, height / -2, 1, 10000);
+            camera = perscamera;
+            camera.position.set(100, 160, 30);
+            camera.up.set(0, 1, 0);
+            camera.lookAt({ x: 0, y: 0, z: 0 });
 
-            // ★追加 マウス操作
-            var controls = new THREE.OrbitControls(camera);
-            controls.enableZoom = false;
-            controls.autoRotate = true;
+            // add light ３点光にしてあげる
+            var light = new THREE.DirectionalLight(0xffffff);
+            light.position.set(1, 1, 1);
+            scene.add(light);
 
-            // ★追加 MTL,Obj読み込み
-            new THREE.MTLLoader().setPath('./')
-                .load('Lantern_kobit.mtl',
-                    function (materials) {
-                        materials.preload();
-                        new THREE.OBJLoader().setPath('./').setMaterials(materials).load('Lantern_kobit.obj',
-                            function (object) {
-                                objmodel = object.clone();
-                                obj = new THREE.Object3D();
-                                obj.add(objmodel);
-                                obj.position.set(0, -1.2, 0);
-                                scene.add(obj);
-                            }
-                        );
-                    });
-            var obj = new THREE.Mesh();
+            var light = new THREE.DirectionalLight(0xffffff);
+            light.position.set(-1, -1, -1);
+            scene.add(light);
 
-            // 実行
-            animate();
-            function animate() {
-                requestAnimationFrame(animate);//★追加 アニメーション実行
-                obj.rotation.y += 0.002; //★追加 3Dオブジェクトを自動回転させる
-                renderer.render(scene, camera);
+            var light = new THREE.AmbientLight(0x444444);
+            scene.add(light);
+
+            // controls ------------------------------
+            controls = new THREE.OrbitControls(camera);
+            // controls.userPan = false;
+            // controls.userPanSpeed = 0.0;
+            controls.maxDistance = 5000.0;
+            // controls.maxPolarAngle = Math.PI * 0.495;
+            controls.autoRotate = true;     //true:自動回転する,false:自動回転しない
+            controls.autoRotateSpeed = 2.0;    //自動回転する時の速度
+
+            // // axis ------------------------------
+            var axis = new THREE.AxisHelper(1000);
+            axis.position.set(0, 0, 0);
+            scene.add(axis);
+
+        }
+
+        function render() {
+            requestAnimationFrame(render);
+
+            renderer.render(scene, camera);
+            controls.update();
+        }
+
+        function loadOBJ() {
+            // obj mtl を読み込んでいる時の処理
+            var onProgress = function (xhr) {
+                if (xhr.lengthComputable) {
+                    var percentComplete = xhr.loaded / xhr.total * 100;
+                    console.log(Math.round(percentComplete, 2) + '% downloaded');
+                }
             };
 
-            // ★追加 画面リサイズ
-            onResize();
-            window.addEventListener('resize', onResize);
+            // obj mtl が読み込めなかったときのエラー処理
+            var onError = function (xhr) { };
 
-            function onResize() {
-                var width = window.innerWidth;
-                var height = window.innerHeight;
+            // obj mtlの読み込み
+            var mtlLoader = new THREE.MTLLoader();
+            mtlLoader.setPath(assetsPath);              // this/is/obj/path/
+            mtlLoader.load('Lantern_kobit.mtl', function (materials) {
+                materials.preload();
+                var objLoader = new THREE.OBJLoader();
+                objLoader.setMaterials(materials);
+                objLoader.setPath(assetsPath);            // this/is/obj/path/
+                objLoader.load('Lantern_kobit.obj', function (object) {
+                    objmodel = object.clone();
+                    objmodel.scale.set(0.3, 0.3, 0.3);      // 縮尺の初期化
+                    objmodel.rotation.set(0, 0, 0);         // 角度の初期化
+                    objmodel.position.set(0, 0, 0);         // 位置の初期化
 
-                renderer.setPixelRatio(window.devicePixelRatio);
-                renderer.setSize(width, height);
+                    // objをObject3Dで包む
+                    obj = new THREE.Object3D();
+                    obj.add(objmodel);
 
-                camera.aspect = width / height;
-                camera.updateProjectionMatrix();
-            }
-        });</script>
+                    scene.add(obj);                         // sceneに追加
+                }, onProgress, onError);
+            });
+        }
+    </script>
 </body>
 
 </html>
-
-<!--https://dp778.co.jp/blog/production/6743/-->
