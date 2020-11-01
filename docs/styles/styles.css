@@ -79,17 +79,15 @@
      a { 
          text-decoration: none ;
          cursor: pointer;
+         color:#FFF;
      }
  
-     a:link {
-      color: #CCC;
-    }
+  
      a:visited {
-      color:#CCC;
+      /*color:#FFF;*/
     }
      a:hover {
-      color:#AAA;
-      cursor: pointer;
+    /*color:#AAA;*/
     }
      a:active {
       color:#FFF;
@@ -155,24 +153,34 @@ p{
 /*言語のスタイル*/
 .language{
    text-align: right;
-   color: #CCC;
+   color: #FFF;
    position:relative;
    margin:0 30px;
-   display:inline-block
+   display:inline-block;
+   padding:18px 0;
  }
-#language-text{
+#language-menu{
+  color: #FFF;
   font-size:16px;
   margin-right:12px;
 }
 
- .language>a.here{
+#inactive{
+  color:#AAA;
+ }
+
+ #inactive:hover{
   color:#FFF;
  }
 
- .language>a{
-  margin: 0 4px;
+ .language-choice{
+
   font-size: 20px;
 
+ }
+ .language-or{
+   margin:0 4px;
+   color: #FFF;
  }
 
 
@@ -568,7 +576,7 @@ max-width:130px;
 }
 #top-head a,
 #top-head {
-	color: #fff;
+/*	color: #fff;*/
 	text-decoration: none;
 }
 #top-head .inner {
@@ -630,6 +638,7 @@ max-width:130px;
 }
 
 
+
 /* Fixed */
 #top-head.fixed {
 	margin-top: 0;
@@ -646,12 +655,35 @@ max-width:130px;
 }
 #top-head.fixed .logo {
 	font-size: 24px;
-  color: rgba(19,36,68,0.8);
+  color: rgb(19,36,68);
 }
 #top-head.fixed #global-nav ul li a {
-	color:  rgba(19,36,68,0.8);
+	color:  rgb(19,36,68);
 	padding: 0 20px;
 }
+
+/*言語のスタイル*/
+#top-head.fixed #global-nav ul div a{
+
+  color:  rgb(19,36,68);
+
+}
+
+
+#top-head.fixed #global-nav #inactive{
+  color:  rgba(19,36,68,0.6);
+}
+
+#top-head.fixed #global-nav #inactive:hover{
+ color:rgba(19,36,68);
+}
+
+#top-head.fixed #global-nav ul div span{
+
+  color:  rgb(19,36,68);
+
+}
+
 
 /* Fixed Btn Hover */
 #top-head.fixed #global-nav ul li:after {
@@ -793,7 +825,8 @@ max-width:130px;
 	}
 	#top-head.fixed #global-nav ul li a {
 		padding: 0 15px;
-	}
+  }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -898,6 +931,10 @@ max-width:130px;
 		-moz-transform: translateY(556px);
 		-webkit-transform: translateY(556px);
 		transform: translateY(556px);
+  }
+
+  #global-nav div{
+    padding:18px 0;
   }
   
   .card-habit{

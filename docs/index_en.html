@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="utf-8">
+    <title>The Dwelling of Dwarf | ODENKI</title>
+    <link rel="stylesheet" href="styles/swiper.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta property="og:url" content="https://sumikko-mountain.github.io/the-dwelling-of-dwarf/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Dwelling of Dwarf | ODENKI" />
+    <meta property="og:description" content="This is the introduction web site of 'The Dwelling of Dwarf'" />
+    <meta property="og:site_name" content="The Dwelling of Dwarf" />
+    <meta property="og:image" content="http://drive.google.com/uc?export=view&id=1J8R47Rl4eun4Mq2E51QcaLqMOpoLp362" />
+    <meta property="fb:app_id" content="4544812775591364" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@odenki_lab" />
+    <meta name="twitter:player" content="@odenki_lab" />
+    <!--favicon-->
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+    <link rel="icon" type="image/png" href="./img/favicons/android-chrome-192x192.png" sizes="192x192">
+
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <!--font-->
+    <script type="text/javascript"
+        src="//typesquare.com/3/tsst/script/ja/typesquare.js?5f212f1631a04631a9715ceee90393a3" charset="utf-8"></script>
+    <!--JS-->
+    <script src="./js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <!--glonav-->
+    <script>
+        (function ($) {
+            $(function () {
+                var $header = $('#top-head');
+                // Nav Fixed
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() > 350) {
+                        $header.addClass('fixed');
+                    } else {
+                        $header.removeClass('fixed');
+                    }
+                });
+                // Nav Toggle Button
+                $('#nav-toggle').click(function () {
+                    $header.toggleClass('open');
+                    console.log("open");
+                });
+            });
+        })(jQuery);
+        $(function () {
+
+            var pos = 0;
+            var header = $('header');
+            var hideClass = 'hideClass';
+
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() < pos) {
+                    //上スクロール時ヘッダーのhideClassを削除
+                    header.removeClass(hideClass);
+                } else {
+                    //下スクロール時ヘッダーにhideClassを追加
+                    header.addClass(hideClass);
+                }
+                pos = $(this).scrollTop();
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+
+
+    <header id="top-head" class="site-header">
+        <div class="inner">
+            <div id="mobile-head">
+
+                <div id="nav-toggle">
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <nav id="global-nav">
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#story">STORY</a></li>
+                    <li><a href="#video">VIDEO</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#creator">CREATOR</a></li>
+                    <div class="laguage"> <span id="language-menu">Language</span><a id="inactive"
+                            class="language-choice" href="./index.html">JA</a><span class="language-or">/</span><a
+                            class="language-choice" href="./index-en.html">EN</a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="hero">
+        <div class="catch-copy">
+            <h3>Try to stand back and watch</h3>
+            <img src="./img/andon_logo_wh.svg" alt=""></img>
+        </div>
+
+        <!--catch-copy-->
+    </div>
+
+    <main>
+
+
+        <section class="contents">
+
+            <div class="eachSection">
+
+                <a class="sectionTitle" name="about">ABOUT</a>
+                <div class="box box-second">
+                    <div class="pict"><img src="./img/IMG_1885.jpg" alt="">
+                    </div>
+                    <div class="text right">
+
+                        <p class="ja">
+                            The Dwelling of Dwarf is an interactive art piece about distance. The portable lanterns
+                            inhabited by dwarfs turn darker as people approach and brighter as they leave. In contrast
+                            to ordinary lighting fixtures, this mysterious behavior is an opportunity for visitors to
+                            think about the sense of distance between them and other people, as well as the sense of
+                            distance in the viewing experience.
+                        </p>
+                        <p class="ja">
+                            When you look closely at art, you usually get close to it. But what if there is art that you
+                            can't see unless you move away from it? The sight of several people in a small room, stuck
+                            to a wall to watch, that in itself sounds interesting...!
+                            The Dwelling of Dwarf is a project launched in the summer of 2019 as a result of these
+                            fantasies. During its production, we plunged into the Covid-19 pandemic, and it made me
+                            think again about the meaning of the work.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="eachSection">
+
+                <a class="sectionTitle" name="story">STORY</a>
+
+                <div class="box">
+                    <div class="pict"><img src="./img/IMG_1994.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <p class="ja">
+                            There is a dwarf living in this lantern. This dwarf has the power to light the lights. In
+                            search of a safe place to live, the dwarf wanders from one light fixture to another after it
+                            has done its job and settles in the one he likes. Right now, this lantern seems to be his
+                            favorite.
+                        </p>
+                        <p class="ja">
+                            But their lives are intertwined with a sense of urgency, not knowing when they will find a
+                            place to live. They live in secret so that no one can find them.
+                        </p>
+                        <p class="ja">
+                            If a person approaches the lantern, the dwarf will be startled and disappear. Try not to
+                            scare them and watch them gently.
+                        </p>
+                    </div>
+
+                </div>
+
+                <section class="habit">
+                    <h3 class="subTitle">The habits of a dwarf</h3>
+                    <div class="flexBox-habitat">
+                        <section class="card-habit">
+                            <div class="card-content">
+                                <div class="maru">
+                                    <span>1</span>
+                                </div>
+                                <h3 class="habit-title">I prefer stay in quiet, small and compact places.</h3>
+                                <p class="habit-detail">
+                                    In a place that's too big, I don't know what to do.
+                                </p>
+
+                            </div>
+                            <img class="habit-img" src="img/habit1_neatly.png" alt="">
+
+                        </section>
+
+                        <section class="card-habit">
+
+                            <div class="card-content">
+                                <div class="maru">
+                                    <span>2</span>
+                                </div>
+                                <h3 class="habit-title">If I stay long enough, I start to work on my house.</h3>
+                                <p class="habit-detail">
+                                    My current house has a handle on the entrance and tatami mats.
+                                </p>
+
+                            </div>
+                            <img class="habit-img" src="img/habit2_craftsmanship.png" alt="">
+                        </section>
+                        <section class="card-habit">
+
+                            <div class="card-content">
+                                <div class="maru">
+                                    <span>3</span>
+                                </div>
+                                <h3 class="habit-title">There's a network of dwarfs.</h3>
+                                <p class="habit-detail">
+                                    We share information about safe neighborhoods and new properties.
+                                </p>
+
+                            </div>
+                            <img class="habit-img" src="img/habit3_network.png" alt="">
+                        </section>
+                </section>
+
+            </div>
+
+
+
+
+            <!--VIDEO-->
+            <div class="eachSection">
+                <a class="sectionTitle" name="video">VIDEO</a>
+                <div class="youtube-wrap">
+                    <iframe width="800" height="450" src="https://www.youtube.com/embed/hbYL8RCnAt4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+
+            </div>
+
+
+            <!--GALLERY-->
+            <div class="eachSection">
+                <a class="sectionTitle" name="gallery">GALLERY</a>
+
+
+                <div class="sample sample06">
+                    <div class="swiper-container main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/IMG_1900.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1844.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1835.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/S__4694038.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1112.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1396.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1403.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1906.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2004.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1875.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2119_ed.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2102.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2113.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1860.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_0025.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1855.jpg"></div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <div class="swiper-container thumbnail">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/IMG_1900.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1844.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1835.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/S__4694038.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1112.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1396.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1403.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1906.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2004.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1875.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2119_ed.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2102.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_2113.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1860.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_0025.jpg"></div>
+                            <div class="swiper-slide"><img src="./img/IMG_1855.jpg"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <p class="model-link"><a class="btn-border" href="./3dviewer/model.html">View the 3D Model</a></p>
+            </div>
+
+
+
+            </div>
+
+            <!--CREATOR-->
+            <div class="eachSection">
+                <a class="sectionTitle" name="creator">CREATOR</a>
+                <div class="about-odenki">
+                    <div class="odenki-logo">
+                        <p><img class="logoType" src="img/ODENKI-logoMark_yellow.svg" alt=""></p>
+                        <p><img class="logoType" src="img/ODENKI_yellow.svg" alt=""></p>
+                    </div>
+                    <p class="sectionDescription">ODENKI is a creative unit that focuses on creating glowing interactive
+                        art.</p>
+                </div>
+                <div class="flexBox-creator">
+                    <section class="card">
+                        <img class="card-img" src="img/sekineko.png" alt="">
+                        <div class="card-content">
+                            <h2 class="role">engineer</h2>
+                            <h1 class="card-title">関 優志</h1>
+                            <h2 class="name-en">Masashi Seki</h2>
+                            <p class="card-text">
+                                Since childhood, I have loved giving shape to my images, and I want to combine
+                                entertainment and technology to provide people with amazing and inspiring experiences.
+                                Whenever an idea pops into my head, I want to give it shape by myself, so I produce it.
+                                I like to create both individually and as a team. It gives me pleasure to see people
+                                enjoying the work I am involved in.
+                            </p>
+                            <p class="card-role head">
+                                - Role in this work -</p>
+                            <p class="card-role">
+                                Hardware design/control　Electronic circuit design
+                            </p>
+                        </div>
+                        <div class="card-link">
+                            <a href="https://www.masashi.tech/">Portfolio</a>
+                            <a href="https://twitter.com/cactus_hats">Twitter</a>
+                        </div>
+                    </section>
+
+                    <section class="card">
+                        <img class="card-img" src="img/yui_400x400.png" alt="">
+                        <div class="card-content">
+                            <h2 class="role">designer</h2>
+                            <h1 class="card-title">隅山 侑衣子</h1>
+                            <h2 class="name-en">Yuiko Suyama</h2>
+                            <p class="card-text">
+                                I'm a twenty year old girl who is studying design as I breathe. I'm curious and try out
+                                many different fields, but lately I've been focusing on interface interaction design.
+                                Although I don't seek high tech in my personal life, I love to follow it. My hobbies
+                                include listening to the radio, watching plays, and taking apart small appliances. I'm
+                                not good at sipping noodles, but I'm good at taking pills.
+                            </p>
+                            <p class="card-role head">
+                                - Role in this work -</p>
+                            <p class="card-role">
+                                Planning　CG Movie　Web　Product Design
+                            </p>
+                        </div>
+                        <div class="card-link">
+                            <a href="https://yuikosuyama.myportfolio.com/">Portfolio</a>
+                            <a href="https://twitter.com/mt_sumikko">Twitter</a>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+
+
+
+
+        </section>
+        <div class="follow-twitter">
+            <a href="https://twitter.com/odenki_lab?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                data-show-count="false">Follow @odenki_lab</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <footer>
+            <p>Copyright ©2020 ODENKI</p>
+        </footer>
+    </main>
+
+    <!--topに戻る-->
+    <div id="js-scroll-fadein" class="js-scroll-fadein arrow">
+        <img id="view" src="./img/gototop.svg" width=60px height=auto>
+
+    </div>
+    <script src="js/index.js"></script>
+    <!--読み込み最後じゃないと失敗するっぽい-->
+</body>
+
+</html>
+
+<!--
+  Special Thaks
+  https://www.willstyle.co.jp/blog/724/
+  https://niwaka-web.com/flexbox_reverse02/
+  https://www.webopixel.net/javascript/1060.html
+  https://into-the-program.com/upper-lower-scroll/
+  https://webdesignday.jp/inspiration/technique/css/3876/
+  https://www.netshop7.com/blog2/kasaneru-css/
+  https://www.willstyle.co.jp/blog/724/
+  https://xn--web-oi9du9bc8tgu2a.com/js-swiper-sample/
+  https://www.puzzle-web.jp/archive/1298/
+-->
