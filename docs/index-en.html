@@ -33,9 +33,10 @@
 
     <!--glonav-->
     <script>
+        // 追従ナビ・スマホでハンバーガーメニューになる
         (function ($) {
             $(function () {
-                var $header = $('#top-head');
+                var $header = $('#head_wrap');
                 // Nav Fixed
                 $(window).scroll(function () {
                     if ($(window).scrollTop() > 350) {
@@ -45,41 +46,36 @@
                     }
                 });
                 // Nav Toggle Button
-                $('#nav-toggle').click(function () {
+                $('#nav-toggle, #global-nav ul li a').click(function () {
                     $header.toggleClass('open');
-                    console.log("open");
                 });
             });
         })(jQuery);
+
+        // ゆっくりスクロールする
         $(function () {
-
-            var pos = 0;
-            var header = $('header');
-            var hideClass = 'hideClass';
-
-            $(window).on('scroll', function () {
-                if ($(this).scrollTop() < pos) {
-                    //上スクロール時ヘッダーのhideClassを削除
-                    header.removeClass(hideClass);
-                } else {
-                    //下スクロール時ヘッダーにhideClassを追加
-                    header.addClass(hideClass);
-                }
-                pos = $(this).scrollTop();
+            $('a[href^="#"]').click(function () {
+                var adjust = 0;
+                var speed = 1200;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top + adjust;
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
             });
-
         });
-
     </script>
 </head>
 
 <body>
 
-
-    <header id="top-head" class="site-header">
+    <!-- header -->
+    <header class="header" id="head_wrap">
         <div class="inner">
             <div id="mobile-head">
-
+                <h1 class="logo">
+                    ロゴ
+                </h1>
                 <div id="nav-toggle">
                     <div>
                         <span></span>
@@ -90,20 +86,16 @@
             </div>
             <nav id="global-nav">
                 <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#story">STORY</a></li>
-                    <li><a href="#video">VIDEO</a></li>
-                    <li><a href="#gallery">GALLERY</a></li>
-                    <li><a href="#creator">CREATOR</a></li>
-                    <div class="laguage"> <span id="language-menu">Language</span><a id="inactive"
-                            class="language-choice" href="./index.html">JA</a><span class="language-or">/</span><a
-                            class="language-choice" href="./index-en.html">EN</a>
-                    </div>
+                    <li><a href="#menu1">MENU1</a></li>
+                    <li><a href="#menu2">MENU2</a></li>
+                    <li><a href="#menu3">MENU3</a></li>
+                    <li><a href="#menu4">MENU4</a></li>
+                    <li><a href="#menu5">MENU5</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
+    <!-- /header -->
 
     <div class="hero">
         <div class="catch-copy">

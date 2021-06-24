@@ -1,3 +1,39 @@
+
+// 追従ナビ・スマホでハンバーガーメニューになる
+(function ($) {
+    $(function () {
+        var $header = $('#head_wrap');
+        var $mobile_head = $('#mobile-head');
+        // Nav Fixed
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 650) {
+                $header.addClass('fixed');
+                console.log("fixed");
+            } else {
+                $header.removeClass('fixed');
+            }
+        });
+        // Nav Toggle Button
+        $('#nav-toggle, #global-nav ul li a').click(function () {
+            $header.toggleClass('open');
+            $mobile_head.toggleClass('color-key');
+        });
+    });
+})(jQuery);
+
+// ゆっくりスクロールする
+$(function () {
+    $('a[href^="#"]').click(function () {
+        var adjust = 0;
+        var speed = 1200;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top + adjust;
+        $('body,html').animate({ scrollTop: position }, speed, 'swing');
+        return false;
+    });
+});
+
 /*---------topへ戻るボタン-------------*/
 function getScrolled() {
     return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop;
