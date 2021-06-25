@@ -909,6 +909,14 @@ div.to-detail span{
 
     @media screen and (max-width: 640px) {
 
+
+      #bg-video{
+         width: auto;
+         height: 100vh;
+         z-index: -100;
+         background-size: cover;
+        }
+
       .one-section{
         padding:0 16px;
       
