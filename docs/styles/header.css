@@ -120,11 +120,8 @@ ul.langu-menu{
 #global-nav ul li a {
   padding: 8px 0px;
   box-sizing: border-box;
-  font-size: 1.25rem;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all  1s ease;
+  font-size: 1.125rem;
+  color:#fff;
 }
 
 .last-menu a{
@@ -132,36 +129,6 @@ ul.langu-menu{
 }
 
 
-
-
-/*言語のスタイル*/
-.language{
-    text-align: right;
-    color: #FFF;
-    position:relative;
-    margin:0 30px;
-    display:inline-block;
-    padding:18px 0;
-  }
- #language-menu{
-   color: #FFF;
-   font-size:1rem;
-   margin-right:12px;
- }
- 
- #inactive{
-   color:#AAA;
-  }
- 
-  #inactive:hover{
-   color:#FFF;
-  }
- 
- 
-  .language-or{
-    margin:0 4px;
-    color: #FFF;
-  }
 
   
 
@@ -207,6 +174,38 @@ ul.langu-menu{
     -webkit-tap-highlight-color: transparent;
 }
 
+
+
+/*言語のスタイル*/
+.language{
+    text-align: right;
+    color: #FFF;
+    position:relative;
+    margin:0 30px;
+    display:inline-block;
+    padding:18px 0;
+  }
+ #language-menu{
+   color: #FFF;
+   font-size:1rem;
+   margin-right:12px;
+ }
+ 
+ #global-nav ul li a#inactive{
+   color:#AAA;
+  }
+ 
+  #global-nav ul li a#inactive:hover{
+   color:#FFF;
+  }
+ 
+ 
+  .language-or{
+    margin:0 4px;
+    color: #FFF;
+  }
+
+
 @media (max-width: 768px) {
   #head_wrap {
     top: 0;
@@ -235,12 +234,9 @@ ul.langu-menu{
     background:rgba(19,36,68,1);
   }
 
-  #head_wrap.fixed h1.logo,
-  #head_wrap h1.logo {
-    position: absolute;
-    left: 16px;/*sp用mainのpaddingに合わせる*/
-    top: 20px;
-    margin:0px;
+  #head_wrap.fixed {
+
+    background: transparent;
   }
 
   #global-nav {

@@ -1,0 +1,26 @@
+
+/*=== 9-1-2 丸が動いてスクロールを促す ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown2{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	bottom:10px;
+	left:50%;
+}
+
+
+
+
+/* 線の描写 */
+.scrolldown2:after{
+	content:"";
+    /*描画位置*/
+	position: absolute;
+	bottom:0;
+	left:0;
+    /*線の形状*/
+	width:2px;
+	height: 50px;
+	background:#eee;
+}

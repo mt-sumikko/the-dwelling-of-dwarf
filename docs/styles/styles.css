@@ -46,7 +46,7 @@
  footer, header, hgroup, menu, nav, section {
    display: block; }
  
- 
+
  /*各種見出しとかタグのデフォルト設定*/
 
 
@@ -100,48 +100,47 @@ height:50px;
 .scrolldown span{
   /*描画位置*/
 position: absolute;
-left:-15px;
+left:-22px;
 top: -15px;
-  /*テキストの形状*/
+
 color: #eee;
 font-size: 0.7rem;
-letter-spacing: 0.05em;
+letter-spacing: 0.125em;
 }
 
 /* 線の描写 */
 .scrolldown::after{
 content: "";
-  /*描画位置*/
+
 position: absolute;
 top: 0;
-  /*線の形状*/
+
 width: 1px;
 height: 30px;
 background: #eee;
-  /*線の動き1.4秒かけて動く。永遠にループ*/
+
 animation: pathmove 1.6s ease-in-out infinite;
 opacity:0;
 }
 
 /*高さ・位置・透過が変化して線が上から下に動く*/
+
 @keyframes pathmove{
-0%{
-  height:0;
-  top:0;
-  opacity: 0;
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+    height:20px;
+		opacity: 1;
+	}
+	100%{
+   
+		top:30px;
+		opacity: 0;
+	}
 }
-30%{
-  height:30px;
-  opacity: 1;
-}
-100%{
-  height:0;
-  top:50px;
-  opacity: 0;
-}
-}
-
-
 
 
 
@@ -154,9 +153,9 @@ opacity:0;
 }
 
 .catch-copy img{
-  max-width:460px;
+  max-width:420px;
   width:36vw;
-  min-width:140px;
+  min-width:200px;
 }
 
 p.copy{
@@ -164,7 +163,6 @@ p.copy{
 margin-bottom:0.4em;
 }
 
-/* ----- グラデーションオーバーレイ ----- */
 .video-wrap{
  height: calc(100vw/16*9);
  position: relative;
@@ -177,7 +175,7 @@ margin-bottom:0.4em;
 
 .one-section{/*各セクション間の余白*/
   margin:0 auto 140px auto; 
-  padding:0 16px;
+  padding:0 24px;
   max-width:960px;
 
 }
@@ -194,7 +192,9 @@ margin-bottom:0.4em;
   font-size:1.125rem;
 
 }
-
+img.logo{
+  width:180px;
+}
 
  
    a.section-title {
@@ -255,18 +255,27 @@ margin-bottom:0.4em;
 
  
  body{
-  background-color:#132444;/*#0e607c*/
+  background-color:#132444;
+  color: #FFF;
   margin: 0px auto;
-
   font-family: /*'Source Code Pro',*/"A1 Gothic L","Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3","遊ゴシック",sans-serif;
 line-height:1.5;
  
   }
+  a{
+  
+    color:var(--color-odenki);
+    
+  }
+  a:hover{
+    opacity:0.75;
+  }
+  
 
   /*固定する背景*/
 div.text-center {
   box-sizing: border-box;
-  color: #FFF;
+
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -290,12 +299,12 @@ div.text-center {
 margin:60px auto;
 }
 .scrollbox2 {
-margin-top:60px;
+margin-top:80px;
 }
 
 div.story{
   position:relative;
-  margin-bottom:80px;
+  margin-bottom:60px;
 }
 .dwarf-lighting{
 position:absolute;
@@ -519,6 +528,11 @@ h3.habit-head{
   line-height:1;
 }
 
+h3.statement-title{
+  font-size:1.5rem;
+  line-height:1;
+}
+
 span.text_maru{
 font-size:0.6em;
 vertical-align: middle;
@@ -692,7 +706,7 @@ text-align: center;
   color: #FFF;
 }
 
-.a-creator{
+.flex-two-item{
   max-width:450px;
   color:#fff;
 }
@@ -745,32 +759,108 @@ margin-bottom:4px;
 p.role{
   margin-bottom:20px;
 }
-.portfolio-link a{
+.portfolio{
   font-size:1.5rem;
-  color:var(--color-odenki);
-  
 }
-.portfolio-link a:hover{
-  opacity:0.75;
-}
-.portfolio-link span{
+
+.portfolio span{
   margin-left:8px;
 }
 
-@media (max-width:992px) {
-  .a-creator{
+
+.external-link {
+  align-items: center;
+}
+
+.a-statement img{
+width:80%;
+display: block;
+margin: 0 auto;
+}
+
+h3.statement-title{
+  margin-bottom:20px;
+  text-align: center;
+}
+
+p.statement-detail{
+  margin-bottom:20px;
+}
+
+div.theme{
+  color:var(--color-white);
+  font-size:1.5rem;
+line-height:1;
+margin:60px auto 60px auto;
+
+text-align: center;
+}
+div.theme  span{
+  display:inline-block;
+}
+.box-text{
+  width:116px;
+  padding:12px;
+  border:solid 2px var(--color-odenki);
+  border-radius: 4px;
+}
+span.cross{
+margin:0 20px;
+}
+
+div.to-detail{
+  margin-top:60px;
+  text-align: center;
+  font-size:1.125rem;
+  width:100%;
+}
+
+div.to-detail span{
+  margin-right:4px;
+}
+@media screen and (min-width: 400px) and (max-width:992px) {
+  .flex-two-item{
     width:46%;
     min-width:340px;
   }
+
+
+}
+@media screen  and (max-width:992px) {
   .a-creator div.names{
     width:46%;
   }
 
+  @media screen  and (max-width:400px) {
+    .a-creator div.names{
+      width:60%;
+
+    }
+
+    .creator-img{
+      width:30%;
+    }
+
 }
     @media (max-width:768px) {
 
+      .flexBox-creator{
+        display:block;
+       }
+ .flex-two-item{
+ margin:0 auto;
+ width:100%;
+ }
+       .first-flex-item{
+         margin-bottom:60px;
+       }
+
       .flexBox-habitat{
         display:block;
+      }
+
+      img.logo{
+        width:120px;
       }
 
       p.copy{
@@ -815,18 +905,14 @@ p.role{
         margin:0 auto 80px auto;
       }
 
-      .flexBox-creator{
-       display:block;
-      }
-.a-creator{
-margin:0 auto;
-}
-      .first-creator{
-        margin-bottom:60px;
-      }
     }
 
     @media screen and (max-width: 640px) {
+
+      .one-section{
+        padding:0 16px;
+      
+      }
 
       p.copy{
         font-size:1rem;
