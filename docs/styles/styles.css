@@ -65,15 +65,11 @@
  }
  /* ----- 背景の上に表示させたいコンテンツ ----- */
  .on-video{
-
   z-index: 2; /*必ず必要*/
-
-
   position:absolute;
   /*max-width:480px;*/
-
   top: 50%;
-  left: 12%;
+  left:6%;
   -ms-transform: translate(-0%,-50%);
   -webkit-transform: translate(-0%,-50%);
   transform: translate(-0%,-50%);
@@ -81,6 +77,11 @@
   padding:12px;
  }
 
+ @media screen and (min-width: 1260px) {
+  .on-video{
+  left:calc(calc(100vw - 1200px)/2);
+  }
+ }
 
 
 
@@ -153,14 +154,14 @@ opacity:0;
 }
 
 .catch-copy img{
-  max-width:420px;
+  max-width:400px;
   width:36vw;
-  min-width:200px;
+  min-width:240px;
 }
 
 p.copy{
   font-size:1.5rem;
-margin-bottom:0.4em;
+margin-bottom:0.6em;
 }
 
 .video-wrap{
@@ -211,6 +212,7 @@ img.logo{
        margin-bottom:44px;
     
      }
+
      .section-title:before {
       content: '';
       position: absolute;
@@ -293,6 +295,16 @@ div.text-center {
   background-repeat: no-repeat;
   height:480px;
 }
+.sp-fv-bg{
+  background-image: url('../img/dwarf_hero_sp.jpg');
+  background-attachment: fixed;
+  background-position: 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:100vh;
+  width:auto;
+  display:none;
+}
 
 /*スクロールするコンテンツ*/
 .scrollbox1 {
@@ -354,13 +366,6 @@ opacity: 0.75;
  }
 
 
- /*グロナビ　ヘッダーのスタイル*/
-
-
-p{
-  color:#FFF;
-  line-height: 1.7em;
-}
 
 
    /*グロナビのうち現在いる親の階層　を黒くする*/
@@ -417,6 +422,7 @@ main {
 .js-scroll-fadein.is-fadein {
   visibility: visible;
   opacity: 1;
+  z-index:9999;
 }
 
 /*--------------------------------
@@ -480,7 +486,7 @@ margin: 0 auto;
 text-align:center;
 }
 .text-center p{
-  margin-bottom:2rem;
+  margin-bottom:2em;
   line-height:2;
 }
 
@@ -818,6 +824,19 @@ div.to-detail{
 div.to-detail span{
   margin-right:4px;
 }
+
+#bg-img{
+  display: none !important;
+}
+.sns-icons{
+  margin-bottom:24px;
+}
+.sns-icons a{
+  text-align: center;
+  display:block;
+  margin-bottom:16px;
+}
+
 @media screen and (min-width: 400px) and (max-width:992px) {
   .flex-two-item{
     width:46%;
@@ -909,14 +928,99 @@ div.to-detail span{
 
     @media screen and (max-width: 640px) {
 
+      a.section-title {
+   
+           font-size: 1.75rem;
+         margin-bottom:44px;
+        
+         }
+         
+         .section-title:before {
+          bottom: -12px;/*見出しの文字からどのくらい話すか　数値がでかいほど離れる*/
+          width: 56px;
+ 
+        
+        }
+        .btn-border{
+font-size:1rem;
+padding:16px 44px;
+        }
 
+      .text-center p, .creator-detail,p.statement-detail{
+        font-size:0.875rem;
+      }
+      h3.name{
+        font-size:1.5rem;
+      }
+      .portfolio{
+        font-size:1.25rem;
+      }
+      
+
+      .about-odenki >p{
+        font-size:1rem;
+      }
+      div.theme{
+        font-size:1.25rem;
+      }
+
+      .box-text{
+        width:90px;
+      }
+span.cross{
+margin: 0 12px;
+}
+h3.statement-title{
+  font-size:1.25rem;
+}
+.portfolio span >img{
+  width:18px;
+}
+div.to-detail{
+  font-size:1rem;
+}
+.to-detail .external-link span >img{
+  width:16px;
+}
+
+.video-wrap{
+  height: 100vh;
+  width:auto;
+  position: relative;
+  /*background: linear-gradient(-45deg, rgba(0,0,0, 0.4),rgba(0,0,0, 0.6));*/
+ }
+
+ 
       #bg-video{
          width: auto;
          height: 100vh;
          z-index: -100;
          background-size: cover;
+         display: none !important; 
+        }
+        #bg-img{
+          height: 100vh;
+          width: auto;
+          background-position: 30%;
+          z-index: -100;
+          display: block !important;
+        }
+        .sp-fv-bg{
+          display: block !important;
         }
 
+         .on-video{
+          top: 50%;
+          left: 50%;
+          -ms-transform: translate(-50%,-50%);
+          -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+          margin:0;
+          padding:0;
+          text-align: center;
+         }
+
+         
       .one-section{
         padding:0 16px;
       
