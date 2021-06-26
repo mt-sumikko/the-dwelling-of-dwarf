@@ -851,6 +851,10 @@ div.to-detail span{
   text-align: center;
   margin:0 16px;
 }
+.sns-icons p{
+  margin-top:8px;
+  font-size:0.875rem;
+}
 
 
 @media screen and (min-width: 1260px) {
