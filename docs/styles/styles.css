@@ -810,6 +810,12 @@ div.theme  span{
   border:solid 2px var(--color-odenki);
   border-radius: 4px;
 }
+.box-text-en{
+  padding:12px 16px;;
+  border:solid 2px var(--color-odenki);
+  border-radius: 4px;
+}
+
 span.cross{
 margin:0 20px;
 }
