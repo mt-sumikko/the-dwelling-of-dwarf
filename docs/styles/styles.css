@@ -77,11 +77,6 @@
   padding:12px;
  }
 
- @media screen and (min-width: 1260px) {
-  .on-video{
-  left:calc(calc(100% - 1200px)/2);
-  }
- }
 
 
 
@@ -294,6 +289,17 @@ div.text-center {
   background-size: cover;
   background-repeat: no-repeat;
   height:480px;
+  position :relative;
+}
+
+.parallax-bg p {
+position:absolute;
+max-width:1200px;
+width:90%;
+text-align:right;
+top: 50%;
+margin:0;
+
 }
 .sp-fv-bg{
   background-image: url('../img/dwarf_hero_sp.jpg');
@@ -843,6 +849,26 @@ div.to-detail span{
   margin-bottom:16px;
 }
 
+
+@media screen and (min-width: 1260px) {
+  .on-video{
+  left:calc(calc(100% - 1200px)/2);
+  }
+  .parallax-bg{
+align-items: center;
+vertical-align: center;
+  }
+.parallax-bg p{
+position:absolute;
+display:block;
+width:1200px;
+margin:0 calc(calc(100% - 1200px)/2);
+text-align:right;
+top: 50%;
+
+}
+ }
+
 @media screen and (min-width: 400px) and (max-width:992px) {
   .flex-two-item{
     width:46%;
@@ -933,6 +959,15 @@ div.to-detail span{
     }
 
     @media screen and (max-width: 640px) {
+
+        .parallax-bg p{
+        position:absolute;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+        text-align: center;
+        }
 
       a.section-title {
    
