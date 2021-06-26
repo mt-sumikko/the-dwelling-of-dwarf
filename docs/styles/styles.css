@@ -347,7 +347,7 @@ opacity: 0.75;
 }
   
   footer {
-    border-top: 1px solid #FFB30B;
+    border-top: 1px solid #fff;
      position: relative;
     /* display: table;*/
     max-width:1200px;
@@ -363,7 +363,7 @@ opacity: 0.75;
  
      footer p {
        font-size:0.625rem; 
-       color:#FFB30B;
+       color:#fff;
       }
      footer a {
        text-decoration: none; 
